@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ГАЛЕРЕЯ */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 равных колонок */
+    gap: 10px;
+    /*max-width: 1200px;*/
+    width: 100%;
+    min-height: 100vh; /* Минимальная высота — весь экран */
+    align-content: center; /* Выравнивание по центру, если контента мало */
+}
+
+/* КАРТИНКИ (все квадратные) */
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Делаем квадратный вьюпорт */
+    border-radius: 10px;
+    display: block;
+    object-fit: cover; /* Обрезает изображение, чтобы заполнить квадрат */
+}
+
+/* Поворот для вертикальных картинок */
+.vert {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
