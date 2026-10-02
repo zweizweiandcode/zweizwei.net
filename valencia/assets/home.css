@@ -1,0 +1,18 @@
+
+body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+a{color:#0e7d78;text-decoration:none}
+a:hover{color:#0a5f5b;text-decoration:underline}
+::selection{background:#f2b877}
+.nav-desktop{display:flex}
+.nav-hamburger{display:none}
+@media (max-width:760px){
+  .nav-desktop{display:none}
+  .nav-hamburger{display:block}
+}
+
+/* Mirror the hero gradient top-to-bottom so the yellow meets at the section boundary. */
+.story-section {
+  padding: 64px 24px 20px;
+  background: linear-gradient(22deg, #aecdc2 0%, #4fa89a 40%, #1c7d78 55%, #d9c69e 78%, #e6d3a0 100%);
+}
+.story-content { max-width: 760px; margin: 0 auto; }

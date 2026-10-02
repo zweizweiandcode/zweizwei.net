@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+a{color:#0e7d78;text-decoration:none}
+a:hover{color:#0a5f5b;text-decoration:underline}
+::selection{background:#f2b877}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="background:#3a7d78;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+  <a href="Home.dc.html" style="font-family:'Caveat',cursive;font-size:26px;font-weight:700;color:#fff">{{ t.brand }}</a>
+  <div style="display:flex;align-items:center;gap:10px">
+    <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;color:#fff;background:rgba(255,255,255,.2);padding:5px 12px;border-radius:20px">{{ t.private }}</span>
+    <button onClick="{{ toggleLang }}" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer">{{ t.langBtn }}</button>
+  </div>
+</header>
+
+<section style="max-width:760px;margin:0 auto;padding:44px 24px 8px">
+  <h2 style="font-family:'Caveat',cursive;font-weight:700;font-size:32px;color:#16918c;margin:0 0 4px">{{ t.kicker }}</h2>
+  <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(26px,4vw,38px);color:#23211d;margin:0 0 12px">{{ t.title }}</h1>
+  <p style="font-size:15.5px;line-height:1.6;color:#3a3733;margin:0 0 8px">{{ t.intro }}</p>
+  <div style="background:#fff4de;border-radius:6px;padding:12px 16px;font-size:14px;color:#6b4c1f;font-weight:600">{{ t.addrNote }}</div>
+</section>
+
+<section style="max-width:760px;margin:0 auto;padding:22px 24px 0">
+  <div style="background:#f6d9d4;border-left:6px solid #c94b3d;border-radius:6px;padding:18px 20px;margin-bottom:14px;transform:rotate(-0.4deg)">
+    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:#8a2418;margin-bottom:6px">⚠ {{ t.warn1Title }}</div>
+    <div style="font-size:14.5px;line-height:1.6;color:#5c2117">{{ t.warn1Body }}</div>
+  </div>
+  <div style="background:#f6d9d4;border-left:6px solid #c94b3d;border-radius:6px;padding:18px 20px;margin-bottom:28px;transform:rotate(0.4deg)">
+    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:#8a2418;margin-bottom:6px">⚠ {{ t.warn2Title }}</div>
+    <div style="font-size:14.5px;line-height:1.6;color:#5c2117">{{ t.warn2Body }}</div>
+  </div>
+</section>
+
+<section style="max-width:760px;margin:0 auto;padding:0 24px 80px">
+  <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="5">
+    <div style="margin-bottom:30px">
+      <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;color:#16918c;margin:0 0 10px;border-bottom:2px dashed #d9d0ba;padding-bottom:6px">{{ sec.title }}</h3>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+        <sc-for list="{{ sec.items }}" as="it" hint-placeholder-count="3">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.55;color:#3a3733">
+            <span style="width:16px;height:16px;border:2px solid #16918c;border-radius:3px;flex-shrink:0;margin-top:2px"></span>
+            <span>{{ it }}</span>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </sc-for>
+
+  <p style="font-size:13.5px;color:#8a8378;font-style:italic;margin-top:8px">{{ t.footNote }}</p>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('apt_site_lang')) || 'ru' };
+  toggleLang = () => {
+    const lang = this.state.lang === 'ru' ? 'en' : 'ru';
+    try { localStorage.setItem('apt_site_lang', lang); } catch(e) {}
+    this.setState({ lang });
+  };
+
+  renderVals() {
+    const dict = {
+      ru: {
+        brand:'Casa Alboraya', private:'страница для гостей', langBtn:'EN',
+        kicker:'гид', title:'Гид для гостей',
+        intro:'Эта страница — для тех, кто уже договорился со мной о датах. Здесь практичные заметки: что и как включать, на что обратить внимание и как оставить квартиру перед выездом.',
+        addrNote:'Точный адрес, ключи и вход: уточню отдельно, когда согласуем даты. Здесь этого пока нет.',
+        warn1Title:'Входная дверь захлопывается', warn1Body:'Дверь в квартиру закрывается сама и без ключа снаружи не откроется. Берите ключ с собой, даже если выходите на минуту — детали передам отдельно.',
+        warn2Title:'Балконная дверь тоже захлопывается', warn2Body:'На ветру балконная дверь может резко закрыться. Будьте осторожны с пальцами и не оставляйте ключ от неё внутри, когда выходите на балкон.',
+        footNote:'Подробные инструкции (вода, щиток, котёл, рольставни, уборка, выезд) добавлю после того, как открою доступ к этой странице. Пока — безопасные заглушки.',
+        sections:[
+          {title:'Перед приездом', items:['Точное время заезда — уточню','Как связаться перед приездом — уточню','Что взять с собой — уточню']},
+          {title:'Как всё включить', items:['Электрощиток — инструкция появится здесь','Котёл / горячая вода — инструкция появится здесь','Рольставни — инструкция появится здесь','Wi-Fi — уточню']},
+          {title:'В квартире', items:['Кухня и техника — заметки появятся здесь','Стиральная машина — заметки появятся здесь','Холодильник — заметки появятся здесь','ТВ и кабельные каналы — заметки появятся здесь']},
+          {title:'Терраса', items:['Электричество на террасе — заметки появятся здесь','Стол и мебель — заметки появятся здесь','Доступ к бассейну дома — заметки появятся здесь']},
+          {title:'Перед выездом', items:['Уборка — уточню','Мусор — уточню','Что выключить — уточню','Как закрыть квартиру — уточню']}
+        ]
+      },
+      en: {
+        brand:'Casa Alboraya', private:'guest page', langBtn:'RU',
+        kicker:'guide', title:'Guest guide',
+        intro:"This page is for people who've already agreed on dates with me. Practical notes here: what to switch on, what to watch out for, and how to leave the flat before checkout.",
+        addrNote:"Exact address, keys and entry: shared separately once dates are confirmed. Not here yet.",
+        warn1Title:'The front door locks itself shut', warn1Body:"The flat's front door closes on its own and won't open from outside without a key. Take a key even for a quick errand — details to follow separately.",
+        warn2Title:'The balcony door slams shut too', warn2Body:"In the wind the balcony door can swing shut hard. Watch your fingers, and don't leave its key inside when you step onto the balcony.",
+        footNote:"Detailed instructions (water, fuse box, boiler, shutters, cleaning, checkout) will be added once I open access to this page. For now these are safe placeholders.",
+        sections:[
+          {title:'Before arrival', items:['Exact check-in time — tbd','How to reach me before arrival — tbd','What to bring — tbd']},
+          {title:'Turning everything on', items:['Fuse box — instructions coming here','Boiler / hot water — instructions coming here','Shutters — instructions coming here','Wi-Fi — tbd']},
+          {title:'In the apartment', items:['Kitchen & appliances — notes coming here','Washing machine — notes coming here','Fridge — notes coming here','TV & cable channels — notes coming here']},
+          {title:'Terrace', items:['Terrace electricity — notes coming here','Table & furniture — notes coming here','Access to the house pool — notes coming here']},
+          {title:'Before checkout', items:['Cleaning — tbd','Trash — tbd','What to switch off — tbd','How to lock up — tbd']}
+        ]
+      }
+    };
+    return { lang: this.state.lang, toggleLang: this.toggleLang, t: dict[this.state.lang], sections: dict[this.state.lang].sections };
+  }
+}
+
+</script>
+</body>
+</html>

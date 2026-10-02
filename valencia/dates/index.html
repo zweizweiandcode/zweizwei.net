@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Свободные даты — Casa Alboraya</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/dates.css"><link rel="stylesheet" href="../assets/site.css">
+
+<script src="../assets/site.js" defer></script></head>
+<body data-page="dates"><div id="app">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Даты</a>
+      <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:#fff">Даты</a>
+      <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+  </div>
+</header>
+
+<section style="max-width:900px;margin:0 auto;padding:56px 24px 10px">
+  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">даты</h2>
+  <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 12px">Свободные даты</h1>
+  <div style="background:#fff4de;border-radius:6px;padding:14px 18px;margin:0 0 24px;font-size:14.5px;line-height:1.6;color:#6b4c1f;font-weight:600">Даты подтверждаются после моего ответа. Выбор в календаре — это запрос, а не автоматическая бронь.</div>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:0 24px 20px">
+  <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+    <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">Октябрь 2026 (демо-данные)</div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px">
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Пн</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Вт</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Ср</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Чт</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Пт</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Сб</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Нд</div>
+      
+    </div>
+    <div data-calendar></div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;padding-top:14px;border-top:1px solid #eee3d0">
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#fff;border:2px solid #16918c;display:inline-block"></span>можно запросить</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#d8d4cc;display:inline-block"></span>занято</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#ef8a3d;display:inline-block"></span>выбрано</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#f2c896;display:inline-block"></span>ждёт ответа</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;line-height:1.6;color:#8a8378;margin:16px 4px 0;font-style:italic">В будущем сюда можно подключить календарь Booking.com через iCal, чтобы показывать занятые даты. Синхронизация может запаздывать — даже когда календарь подключён, свободная дата означает возможность отправить запрос, а не гарантированную бронь.</p>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:30px 24px 90px">
+  <div data-panel="submitted" hidden>
+    <div style="background:#e7f1e0;border-radius:8px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+      <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#3e6b28;margin-bottom:8px">Это демо</div>
+      <p style="font-size:14.5px;line-height:1.6;color:#3a3733;margin:0 0 14px">В прототипе заявка никуда не отправляется. В реальной версии здесь будет настоящая отправка запроса, а даты останутся в статусе «ждёт ответа», пока я не подтвержу их лично.</p>
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:14px;background:#fff;border:1px solid #16918c;color:#16918c;padding:9px 16px;border-radius:8px;cursor:pointer" data-action="resetForm" type="button">Выбрать другие даты (демо)</button>
+    </div>
+  </div>
+  <div data-panel="notSubmitted">
+    <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+      <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">Отправить запрос на выбранные даты</div>
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:420px">
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Ваше имя<input type="text" value="" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif" data-field="name" name="name" required=""></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Как с вами связаться<input type="text" value="" placeholder="email, телефон или мессенджер" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif" data-field="contact" name="contact" required=""></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Сообщение (необязательно)<textarea rows="3" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif;resize:vertical" data-field="message" name="message"></textarea></label>
+      </div>
+      <div style="margin-top:16px;font-size:13.5px;color:#8a8378">Выбранные даты: пока не выбраны</div>
+      <button disabled="" style="margin-top:16px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:#c9c2b2;color:#fff;border:none;padding:13px 26px;border-radius:9px;cursor:not-allowed;box-shadow:0 6px 14px rgba(0,0,0,.15)" data-action="onSubmit" type="button">Отправить запрос</button>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+</footer>
+
+</div>
+
+</div>
+<template id="page-ru">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Даты</a>
+      <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:#fff">Даты</a>
+      <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+  </div>
+</header>
+
+<section style="max-width:900px;margin:0 auto;padding:56px 24px 10px">
+  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">даты</h2>
+  <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 12px">Свободные даты</h1>
+  <div style="background:#fff4de;border-radius:6px;padding:14px 18px;margin:0 0 24px;font-size:14.5px;line-height:1.6;color:#6b4c1f;font-weight:600">Даты подтверждаются после моего ответа. Выбор в календаре — это запрос, а не автоматическая бронь.</div>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:0 24px 20px">
+  <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+    <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">Октябрь 2026 (демо-данные)</div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px">
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Пн</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Вт</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Ср</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Чт</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Пт</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Сб</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Нд</div>
+      
+    </div>
+    <div data-calendar></div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;padding-top:14px;border-top:1px solid #eee3d0">
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#fff;border:2px solid #16918c;display:inline-block"></span>можно запросить</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#d8d4cc;display:inline-block"></span>занято</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#ef8a3d;display:inline-block"></span>выбрано</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#f2c896;display:inline-block"></span>ждёт ответа</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;line-height:1.6;color:#8a8378;margin:16px 4px 0;font-style:italic">В будущем сюда можно подключить календарь Booking.com через iCal, чтобы показывать занятые даты. Синхронизация может запаздывать — даже когда календарь подключён, свободная дата означает возможность отправить запрос, а не гарантированную бронь.</p>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:30px 24px 90px">
+  <div data-panel="submitted" hidden>
+    <div style="background:#e7f1e0;border-radius:8px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+      <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#3e6b28;margin-bottom:8px">Это демо</div>
+      <p style="font-size:14.5px;line-height:1.6;color:#3a3733;margin:0 0 14px">В прототипе заявка никуда не отправляется. В реальной версии здесь будет настоящая отправка запроса, а даты останутся в статусе «ждёт ответа», пока я не подтвержу их лично.</p>
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:14px;background:#fff;border:1px solid #16918c;color:#16918c;padding:9px 16px;border-radius:8px;cursor:pointer" data-action="resetForm" type="button">Выбрать другие даты (демо)</button>
+    </div>
+  </div>
+  <div data-panel="notSubmitted">
+    <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+      <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">Отправить запрос на выбранные даты</div>
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:420px">
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Ваше имя<input type="text" value="" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif" data-field="name" name="name" required=""></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Как с вами связаться<input type="text" value="" placeholder="email, телефон или мессенджер" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif" data-field="contact" name="contact" required=""></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Сообщение (необязательно)<textarea rows="3" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif;resize:vertical" data-field="message" name="message"></textarea></label>
+      </div>
+      <div style="margin-top:16px;font-size:13.5px;color:#8a8378">Выбранные даты: пока не выбраны</div>
+      <button disabled="" style="margin-top:16px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:#c9c2b2;color:#fff;border:none;padding:13px 26px;border-radius:9px;cursor:not-allowed;box-shadow:0 6px 14px rgba(0,0,0,.15)" data-action="onSubmit" type="button">Отправить запрос</button>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+</footer>
+
+</div>
+
+</template><template id="page-en">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
+      <a href="../dates/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Dates</a>
+      <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Area</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">RU</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Menu" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
+      <a href="../dates/index.html" style="color:#fff">Dates</a>
+      <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Area</a>
+    </nav>
+  </div>
+</header>
+
+<section style="max-width:900px;margin:0 auto;padding:56px 24px 10px">
+  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">dates</h2>
+  <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 12px">Open dates</h1>
+  <div style="background:#fff4de;border-radius:6px;padding:14px 18px;margin:0 0 24px;font-size:14.5px;line-height:1.6;color:#6b4c1f;font-weight:600">Dates are confirmed after my reply. Picking a date here is a request, not an automatic booking.</div>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:0 24px 20px">
+  <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+    <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">October 2026 (mock data)</div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px">
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Mo</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Tu</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">We</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Th</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Fr</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Sa</div>
+      
+        <div style="text-align:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">Su</div>
+      
+    </div>
+    <div data-calendar></div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;padding-top:14px;border-top:1px solid #eee3d0">
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#fff;border:2px solid #16918c;display:inline-block"></span>can request</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#d8d4cc;display:inline-block"></span>booked</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#ef8a3d;display:inline-block"></span>selected</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#f2c896;display:inline-block"></span>awaiting reply</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;line-height:1.6;color:#8a8378;margin:16px 4px 0;font-style:italic">Later this can connect to a Booking.com calendar via iCal to show booked dates. Sync can lag — even once connected, an open date means you can send a request, not a guaranteed booking.</p>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:30px 24px 90px">
+  <div data-panel="submitted" hidden>
+    <div style="background:#e7f1e0;border-radius:8px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+      <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#3e6b28;margin-bottom:8px">This is a demo</div>
+      <p style="font-size:14.5px;line-height:1.6;color:#3a3733;margin:0 0 14px">Nothing is actually sent in this prototype. The real version will send a genuine request, and dates stay “awaiting reply” until I confirm them myself.</p>
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:14px;background:#fff;border:1px solid #16918c;color:#16918c;padding:9px 16px;border-radius:8px;cursor:pointer" data-action="resetForm" type="button">Pick different dates (demo)</button>
+    </div>
+  </div>
+  <div data-panel="notSubmitted">
+    <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+      <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">Send a request for the selected dates</div>
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:420px">
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Your name<input type="text" value="" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif" data-field="name" name="name" required=""></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">How to reach you<input type="text" value="" placeholder="email, phone or messenger" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif" data-field="contact" name="contact" required=""></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">Message (optional)<textarea rows="3" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:&#x27;Nunito Sans&#x27;,sans-serif;resize:vertical" data-field="message" name="message"></textarea></label>
+      </div>
+      <div style="margin-top:16px;font-size:13.5px;color:#8a8378">Selected dates: none yet</div>
+      <button disabled="" style="margin-top:16px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:#c9c2b2;color:#fff;border:none;padding:13px 26px;border-radius:9px;cursor:not-allowed;box-shadow:0 6px 14px rgba(0,0,0,.15)" data-action="onSubmit" type="button">Send request</button>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Got a question? I&#x27;ll reply myself — contact info coming soon.</p>
+  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Guest guide →</a>
+</footer>
+
+</div>
+
+</template>
+</body></html>

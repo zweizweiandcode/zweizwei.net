@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Квартира у моря — Casa Alboraya</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/home.css"><link rel="stylesheet" href="./assets/site.css">
+
+<script src="./assets/site.js" defer></script></head>
+<body data-page="home"><div id="app">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="./index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="./index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Главная</a>
+      <a href="./gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="./dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="./area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="./index.html" style="color:#fff">Главная</a>
+      <a href="./gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="./dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="./area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+  </div>
+</header>
+
+<section style="position:relative;background:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%);background-image:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:100% 100%,36px 36px,36px 36px;padding:56px 20px 90px;overflow:hidden">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center" class="two-columns">
+    <div style="min-width:0">
+      <div style="display:inline-block;background:#fff;color:#16918c;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;padding:5px 12px;border-radius:20px;transform:rotate(-2deg);box-shadow:0 4px 10px rgba(0,0,0,.15);margin-bottom:18px">Альборайя · рядом с Малва-роса</div>
+      <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;color:#fff;font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 18px">Квартира у моря, где хочется задержаться</h1>
+      <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.92);font-size:18px;line-height:1.55;max-width:480px;margin:0 0 28px">Тихий район рядом с пляжем и Валенсией. Открыть окна, сварить кофе, выйти на террасу — и почувствовать себя дома.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="./gallery/index.html" style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:#ef8a3d;color:#fff;padding:14px 24px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.2);text-decoration:none">Посмотреть квартиру</a>
+        <a href="./dates/index.html" style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:transparent;border:2px solid #fff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none">Спросить про даты</a>
+      </div>
+    </div>
+    <div style="position:relative;min-width:0">
+      <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 18px 40px rgba(0,0,0,.3);transform:rotate(2deg)">
+        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Фото квартиры (заглушка)"><span>Фото квартиры (заглушка)</span></div>
+      </div>
+      <div style="position:absolute;top:-10px;left:36px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(-9deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:-10px;right:30px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(8deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:14px;left:-18px;background:#fff;border-radius:4px;padding:8px 14px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-4deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:20px;color:#16918c">привет :)</div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="story-content">
+  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 6px">немного истории</h2>
+  <h3 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:28px;color:#23211d;margin:0 0 18px">Это не отель — это моя квартира</h3>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0 0 14px">Я купила её, чтобы иногда сбегать к морю, а остальное время — сдавать людям, которым нужно то же самое: тишина, солнце и балкон, на котором можно сидеть вечером с книгой.</p>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0">Здесь нет стойки регистрации и брошюр про правила. Есть кухня, стиральная машина и терраса, где хорошо думается ни о чём. Заезжайте, открывайте окна, живите — как дома.</p>
+</div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
+  <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:center">
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-1.5deg)">
+      <div style="position:absolute;top:-9px;left:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(-6deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Что внутри</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0">✓ Кухня</li>
+        
+          <li style="padding:3px 0">✓ Стиральная машина</li>
+        
+          <li style="padding:3px 0">✓ ТВ с кабельными каналами</li>
+        
+          <li style="padding:3px 0">✓ Балкон</li>
+        
+        
+          <li style="padding:3px 0;color:#8a8378">Кол-во гостей и кроватей <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Кондиционер и Wi-Fi <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(1deg)">
+      <div style="position:absolute;top:-9px;right:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(7deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Терраса</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0">✓ Электричество</li>
+        
+          <li style="padding:3px 0">✓ Стол</li>
+        
+          <li style="padding:3px 0">✓ Доступ к бассейну дома</li>
+        
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-0.8deg)">
+      <div style="position:absolute;top:-9px;left:50%;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:translateX(-50%) rotate(-3deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Что полезно знать</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0;color:#8a8378">Расстояние до пляжа <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Парковка <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Цена и правила проживания <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:48px 24px 90px">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px" class="cta-grid">
+    <a href="./gallery/index.html" style="display:block;background:#16918c;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Галерея →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">Комнаты и детали (пока моки)</div>
+    </a>
+    <a href="./dates/index.html" style="display:block;background:#ef8a3d;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Свободные даты →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.88)">Календарь и запрос дат</div>
+    </a>
+    <a href="./area/index.html" style="display:block;background:#3a7d78;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Район →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">Альборайя, Малва-роса, Валенсия</div>
+    </a>
+  </div>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="./guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+</footer>
+
+</div>
+
+</div>
+<template id="page-ru">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="./index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="./index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Главная</a>
+      <a href="./gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="./dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="./area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="./index.html" style="color:#fff">Главная</a>
+      <a href="./gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="./dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="./area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
+    </nav>
+  </div>
+</header>
+
+<section style="position:relative;background:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%);background-image:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:100% 100%,36px 36px,36px 36px;padding:56px 20px 90px;overflow:hidden">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center" class="two-columns">
+    <div style="min-width:0">
+      <div style="display:inline-block;background:#fff;color:#16918c;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;padding:5px 12px;border-radius:20px;transform:rotate(-2deg);box-shadow:0 4px 10px rgba(0,0,0,.15);margin-bottom:18px">Альборайя · рядом с Малва-роса</div>
+      <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;color:#fff;font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 18px">Квартира у моря, где хочется задержаться</h1>
+      <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.92);font-size:18px;line-height:1.55;max-width:480px;margin:0 0 28px">Тихий район рядом с пляжем и Валенсией. Открыть окна, сварить кофе, выйти на террасу — и почувствовать себя дома.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="./gallery/index.html" style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:#ef8a3d;color:#fff;padding:14px 24px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.2);text-decoration:none">Посмотреть квартиру</a>
+        <a href="./dates/index.html" style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:transparent;border:2px solid #fff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none">Спросить про даты</a>
+      </div>
+    </div>
+    <div style="position:relative;min-width:0">
+      <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 18px 40px rgba(0,0,0,.3);transform:rotate(2deg)">
+        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Фото квартиры (заглушка)"><span>Фото квартиры (заглушка)</span></div>
+      </div>
+      <div style="position:absolute;top:-10px;left:36px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(-9deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:-10px;right:30px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(8deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:14px;left:-18px;background:#fff;border-radius:4px;padding:8px 14px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-4deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:20px;color:#16918c">привет :)</div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="story-content">
+  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 6px">немного истории</h2>
+  <h3 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:28px;color:#23211d;margin:0 0 18px">Это не отель — это моя квартира</h3>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0 0 14px">Я купила её, чтобы иногда сбегать к морю, а остальное время — сдавать людям, которым нужно то же самое: тишина, солнце и балкон, на котором можно сидеть вечером с книгой.</p>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0">Здесь нет стойки регистрации и брошюр про правила. Есть кухня, стиральная машина и терраса, где хорошо думается ни о чём. Заезжайте, открывайте окна, живите — как дома.</p>
+</div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
+  <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:center">
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-1.5deg)">
+      <div style="position:absolute;top:-9px;left:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(-6deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Что внутри</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0">✓ Кухня</li>
+        
+          <li style="padding:3px 0">✓ Стиральная машина</li>
+        
+          <li style="padding:3px 0">✓ ТВ с кабельными каналами</li>
+        
+          <li style="padding:3px 0">✓ Балкон</li>
+        
+        
+          <li style="padding:3px 0;color:#8a8378">Кол-во гостей и кроватей <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Кондиционер и Wi-Fi <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(1deg)">
+      <div style="position:absolute;top:-9px;right:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(7deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Терраса</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0">✓ Электричество</li>
+        
+          <li style="padding:3px 0">✓ Стол</li>
+        
+          <li style="padding:3px 0">✓ Доступ к бассейну дома</li>
+        
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-0.8deg)">
+      <div style="position:absolute;top:-9px;left:50%;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:translateX(-50%) rotate(-3deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Что полезно знать</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0;color:#8a8378">Расстояние до пляжа <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Парковка <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Цена и правила проживания <span title="Добавлю точную информацию позже" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">уточню</span></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:48px 24px 90px">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px" class="cta-grid">
+    <a href="./gallery/index.html" style="display:block;background:#16918c;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Галерея →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">Комнаты и детали (пока моки)</div>
+    </a>
+    <a href="./dates/index.html" style="display:block;background:#ef8a3d;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Свободные даты →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.88)">Календарь и запрос дат</div>
+    </a>
+    <a href="./area/index.html" style="display:block;background:#3a7d78;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Район →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">Альборайя, Малва-роса, Валенсия</div>
+    </a>
+  </div>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="./guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+</footer>
+
+</div>
+
+</template><template id="page-en">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="./index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="./index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Home</a>
+      <a href="./gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
+      <a href="./dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
+      <a href="./area/index.html" style="color:rgba(255,255,255,.88)">Area</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">RU</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Menu" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="./index.html" style="color:#fff">Home</a>
+      <a href="./gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
+      <a href="./dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
+      <a href="./area/index.html" style="color:rgba(255,255,255,.88)">Area</a>
+    </nav>
+  </div>
+</header>
+
+<section style="position:relative;background:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%);background-image:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:100% 100%,36px 36px,36px 36px;padding:56px 20px 90px;overflow:hidden">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center" class="two-columns">
+    <div style="min-width:0">
+      <div style="display:inline-block;background:#fff;color:#16918c;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;padding:5px 12px;border-radius:20px;transform:rotate(-2deg);box-shadow:0 4px 10px rgba(0,0,0,.15);margin-bottom:18px">Alboraya · next to Malva-rosa</div>
+      <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;color:#fff;font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 18px">A seaside flat worth staying longer in</h1>
+      <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.92);font-size:18px;line-height:1.55;max-width:480px;margin:0 0 28px">A quiet neighbourhood near the beach and Valencia. Open the windows, make coffee, step onto the terrace — and feel at home.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="./gallery/index.html" style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:#ef8a3d;color:#fff;padding:14px 24px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.2);text-decoration:none">See the apartment</a>
+        <a href="./dates/index.html" style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;background:transparent;border:2px solid #fff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none">Ask about dates</a>
+      </div>
+    </div>
+    <div style="position:relative;min-width:0">
+      <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 18px 40px rgba(0,0,0,.3);transform:rotate(2deg)">
+        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Apartment photo (placeholder)"><span>Apartment photo (placeholder)</span></div>
+      </div>
+      <div style="position:absolute;top:-10px;left:36px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(-9deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:-10px;right:30px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(8deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:14px;left:-18px;background:#fff;border-radius:4px;padding:8px 14px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-4deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:20px;color:#16918c">hi there :)</div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="story-content">
+  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 6px">a little history</h2>
+  <h3 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:28px;color:#23211d;margin:0 0 18px">It&#x27;s not a hotel — it&#x27;s my flat</h3>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0 0 14px">I bought it to escape to the sea now and then, and to host people who need the same thing: quiet, sun, and a terrace to sit on in the evening with a book.</p>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0">There&#x27;s no front desk or house-rules brochure. There&#x27;s a kitchen, a washing machine, and a terrace good for thinking about nothing. Come in, open the windows, live like it&#x27;s home.</p>
+</div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
+  <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:center">
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-1.5deg)">
+      <div style="position:absolute;top:-9px;left:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(-6deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">What&#x27;s inside</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0">✓ Kitchen</li>
+        
+          <li style="padding:3px 0">✓ Washing machine</li>
+        
+          <li style="padding:3px 0">✓ TV with cable channels</li>
+        
+          <li style="padding:3px 0">✓ Balcony</li>
+        
+        
+          <li style="padding:3px 0;color:#8a8378">Guest &amp; bed count <span title="I&#x27;ll add exact info later" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">tbd</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">A/C and Wi-Fi <span title="I&#x27;ll add exact info later" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">tbd</span></li>
+        
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(1deg)">
+      <div style="position:absolute;top:-9px;right:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(7deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Terrace</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0">✓ Electricity</li>
+        
+          <li style="padding:3px 0">✓ A table</li>
+        
+          <li style="padding:3px 0">✓ Access to the house pool</li>
+        
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-0.8deg)">
+      <div style="position:absolute;top:-9px;left:50%;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:translateX(-50%) rotate(-3deg)"></div>
+      <h4 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">Good to know</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        
+          <li style="padding:3px 0;color:#8a8378">Distance to the beach <span title="I&#x27;ll add exact info later" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">tbd</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Parking <span title="I&#x27;ll add exact info later" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">tbd</span></li>
+        
+          <li style="padding:3px 0;color:#8a8378">Price &amp; house rules <span title="I&#x27;ll add exact info later" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">tbd</span></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:48px 24px 90px">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px" class="cta-grid">
+    <a href="./gallery/index.html" style="display:block;background:#16918c;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Gallery →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">Rooms &amp; details (mocks for now)</div>
+    </a>
+    <a href="./dates/index.html" style="display:block;background:#ef8a3d;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Open Dates →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.88)">Calendar and date requests</div>
+    </a>
+    <a href="./area/index.html" style="display:block;background:#3a7d78;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:26px;margin-bottom:6px">Area →</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">Alboraya, Malva-rosa, Valencia</div>
+    </a>
+  </div>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Got a question? I&#x27;ll reply myself — contact info coming soon.</p>
+  <a href="./guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Guest guide →</a>
+</footer>
+
+</div>
+
+</template>
+</body></html>

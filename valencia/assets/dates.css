@@ -1,0 +1,12 @@
+
+body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+a{color:#0e7d78;text-decoration:none}
+a:hover{color:#0a5f5b;text-decoration:underline}
+::selection{background:#f2b877}
+.nav-desktop{display:flex}
+.nav-hamburger{display:none}
+@media (max-width:760px){
+  .nav-desktop{display:none}
+  .nav-hamburger{display:block}
+}
+.daybtn{width:100%;aspect-ratio:1;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center}

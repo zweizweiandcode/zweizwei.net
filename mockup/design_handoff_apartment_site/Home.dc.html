@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+a{color:#0e7d78;text-decoration:none}
+a:hover{color:#0a5f5b;text-decoration:underline}
+::selection{background:#f2b877}
+.nav-desktop{display:flex}
+.nav-hamburger{display:none}
+@media (max-width:760px){
+  .nav-desktop{display:none}
+  .nav-hamburger{display:block}
+}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Home.dc.html" style="font-family:'Caveat',cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">{{ t.brand }}</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px">
+      <a href="Home.dc.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navArea }}</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button onClick="{{ toggleLang }}" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer">{{ t.langBtn }}</button>
+      <button onClick="{{ toggleMenu }}" class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px">☰</button>
+    </div>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px">
+      <a href="Home.dc.html" style="color:#fff">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navArea }}</a>
+    </nav>
+  </sc-if>
+</header>
+
+<section style="position:relative;background:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%);background-image:linear-gradient(158deg,#aecdc2 0%,#4fa89a 40%,#1c7d78 55%,#d9c69e 78%,#e6d3a0 100%),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:100% 100%,36px 36px,36px 36px;padding:56px 20px 90px;overflow:hidden">
+  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center">
+    <div style="min-width:0">
+      <div style="display:inline-block;background:#fff;color:#16918c;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;padding:5px 12px;border-radius:20px;transform:rotate(-2deg);box-shadow:0 4px 10px rgba(0,0,0,.15);margin-bottom:18px">{{ t.heroTag }}</div>
+      <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:#fff;font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 18px">{{ t.heroTitle }}</h1>
+      <p style="font-family:'Nunito Sans',sans-serif;color:rgba(255,255,255,.92);font-size:18px;line-height:1.55;max-width:480px;margin:0 0 28px">{{ t.heroSub }}</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="Gallery.dc.html" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;background:#ef8a3d;color:#fff;padding:14px 24px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.2);text-decoration:none">{{ t.ctaGallery }}</a>
+        <a href="Dates.dc.html" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;background:transparent;border:2px solid #fff;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none">{{ t.ctaDates }}</a>
+      </div>
+    </div>
+    <div style="position:relative;min-width:0">
+      <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 18px 40px rgba(0,0,0,.3);transform:rotate(2deg)">
+        <image-slot id="hero-photo" shape="rect" placeholder="{{ t.heroPhotoPh }}" style="width:100%;aspect-ratio:4/3;display:block"></image-slot>
+      </div>
+      <div style="position:absolute;top:-10px;left:36px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(-9deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:-10px;right:30px;width:52px;height:22px;background:#7c9a4a;opacity:.88;transform:rotate(8deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+      <div style="position:absolute;bottom:14px;left:-18px;background:#fff;border-radius:4px;padding:8px 14px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-4deg);font-family:'Caveat',cursive;font-weight:700;font-size:20px;color:#16918c">{{ t.heroSticker }}</div>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:760px;margin:0 auto;padding:64px 24px 20px">
+  <h2 style="font-family:'Caveat',cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 6px">{{ t.storyKicker }}</h2>
+  <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;color:#23211d;margin:0 0 18px">{{ t.storyTitle }}</h3>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0 0 14px">{{ t.storyP1 }}</p>
+  <p style="font-size:17px;line-height:1.75;color:#3a3733;margin:0">{{ t.storyP2 }}</p>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
+  <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:center">
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-1.5deg)">
+      <div style="position:absolute;top:-9px;left:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(-6deg)"></div>
+      <h4 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">{{ t.card1Title }}</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        <sc-for list="{{ t.card1Items }}" as="item" hint-placeholder-count="4">
+          <li style="padding:3px 0">✓ {{ item }}</li>
+        </sc-for>
+        <sc-for list="{{ t.card1Unknown }}" as="u" hint-placeholder-count="2">
+          <li style="padding:3px 0;color:#8a8378">{{ u }} <span title="{{ t.tbdTitle }}" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">{{ t.tbd }}</span></li>
+        </sc-for>
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(1deg)">
+      <div style="position:absolute;top:-9px;right:24px;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:rotate(7deg)"></div>
+      <h4 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">{{ t.card2Title }}</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        <sc-for list="{{ t.card2Items }}" as="item2" hint-placeholder-count="3">
+          <li style="padding:3px 0">✓ {{ item2 }}</li>
+        </sc-for>
+      </ul>
+    </div>
+
+    <div style="position:relative;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;box-shadow:0 10px 22px rgba(0,0,0,.1);padding:26px 24px;width:280px;transform:rotate(-0.8deg)">
+      <div style="position:absolute;top:-9px;left:50%;width:40px;height:18px;background:#7c9a4a;opacity:.88;transform:translateX(-50%) rotate(-3deg)"></div>
+      <h4 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:#16918c;margin:0 0 12px">{{ t.card3Title }}</h4>
+      <ul style="margin:0;padding:0;list-style:none;font-size:15px;line-height:1.7;color:#3a3733">
+        <sc-for list="{{ t.card3Items }}" as="item3" hint-placeholder-count="4">
+          <li style="padding:3px 0;color:#8a8378">{{ item3 }} <span title="{{ t.tbdTitle }}" style="border-bottom:2px dashed #c9a24a;color:#a3763a;font-weight:700;font-size:12px;padding:1px 4px">{{ t.tbd }}</span></li>
+        </sc-for>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:48px 24px 90px">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+    <a href="Gallery.dc.html" style="display:block;background:#16918c;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:'Caveat',cursive;font-weight:700;font-size:26px;margin-bottom:6px">{{ t.link1Title }}</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">{{ t.link1Sub }}</div>
+    </a>
+    <a href="Dates.dc.html" style="display:block;background:#ef8a3d;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:'Caveat',cursive;font-weight:700;font-size:26px;margin-bottom:6px">{{ t.link2Title }}</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.88)">{{ t.link2Sub }}</div>
+    </a>
+    <a href="Area.dc.html" style="display:block;background:#3a7d78;color:#fff;border-radius:8px;padding:26px 22px;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.15)">
+      <div style="font-family:'Caveat',cursive;font-weight:700;font-size:26px;margin-bottom:6px">{{ t.link3Title }}</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.85)">{{ t.link3Sub }}</div>
+    </a>
+  </div>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:'Nunito Sans',sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">{{ t.footerNote }}</p>
+  <a href="Guide.dc.html" style="font-size:13px;color:rgba(255,255,255,.55)">{{ t.footerGuide }}</a>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('apt_site_lang')) || 'ru', menuOpen: false };
+
+  toggleLang = () => {
+    const lang = this.state.lang === 'ru' ? 'en' : 'ru';
+    try { localStorage.setItem('apt_site_lang', lang); } catch(e) {}
+    this.setState({ lang });
+  };
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+
+  renderVals() {
+    const dict = {
+      ru: {
+        brand: 'Casa Alboraya', langBtn: 'EN', navHome:'Главная', navGallery:'Галерея', navDates:'Даты', navArea:'Район',
+        heroTag: 'Альборайя · рядом с Малва-роса', heroTitle: 'Квартира у моря, где хочется задержаться',
+        heroSub: 'Тихий район рядом с пляжем и Валенсией. Открыть окна, сварить кофе, выйти на террасу — и почувствовать себя дома.',
+        heroPhotoPh: 'Фото квартиры (заглушка)', heroSticker: 'привет :)',
+        ctaGallery: 'Посмотреть квартиру', ctaDates: 'Спросить про даты',
+        storyKicker: 'немного истории', storyTitle: 'Это не отель — это моя квартира',
+        storyP1: 'Я купила её, чтобы иногда сбегать к морю, а остальное время — сдавать людям, которым нужно то же самое: тишина, солнце и балкон, на котором можно сидеть вечером с книгой.',
+        storyP2: 'Здесь нет стойки регистрации и брошюр про правила. Есть кухня, стиральная машина и терраса, где хорошо думается ни о чём. Заезжайте, открывайте окна, живите — как дома.',
+        card1Title: 'Что внутри', card1Items:['Кухня','Стиральная машина','ТВ с кабельными каналами','Балкон'], card1Unknown:['Кол-во гостей и кроватей','Кондиционер и Wi-Fi'], tbd:'уточню', tbdTitle:'Добавлю точную информацию позже',
+        card2Title: 'Терраса', card2Items:['Электричество','Стол','Доступ к бассейну дома'],
+        card3Title: 'Что полезно знать', card3Items:['Расстояние до пляжа','Парковка','Цена и правила проживания'],
+        link1Title:'Галерея →', link1Sub:'Комнаты и детали (пока моки)', link2Title:'Свободные даты →', link2Sub:'Календарь и запрос дат', link3Title:'Район →', link3Sub:'Альборайя, Малва-роса, Валенсия',
+        footerNote:'Есть вопрос? Напишу как отвечу — контакт уточню.', footerGuide:'Гид для гостей →'
+      },
+      en: {
+        brand:'Casa Alboraya', langBtn:'RU', navHome:'Home', navGallery:'Gallery', navDates:'Dates', navArea:'Area',
+        heroTag:'Alboraya · next to Malva-rosa', heroTitle:'A seaside flat worth staying longer in',
+        heroSub:'A quiet neighbourhood near the beach and Valencia. Open the windows, make coffee, step onto the terrace — and feel at home.',
+        heroPhotoPh:'Apartment photo (placeholder)', heroSticker:'hi there :)',
+        ctaGallery:'See the apartment', ctaDates:'Ask about dates',
+        storyKicker:'a little history', storyTitle:"It's not a hotel — it's my flat",
+        storyP1:'I bought it to escape to the sea now and then, and to host people who need the same thing: quiet, sun, and a terrace to sit on in the evening with a book.',
+        storyP2:"There's no front desk or house-rules brochure. There's a kitchen, a washing machine, and a terrace good for thinking about nothing. Come in, open the windows, live like it's home.",
+        card1Title:"What's inside", card1Items:['Kitchen','Washing machine','TV with cable channels','Balcony'], card1Unknown:['Guest & bed count','A/C and Wi-Fi'], tbd:'tbd', tbdTitle:"I'll add exact info later",
+        card2Title:'Terrace', card2Items:['Electricity','A table','Access to the house pool'],
+        card3Title:'Good to know', card3Items:['Distance to the beach','Parking','Price & house rules'],
+        link1Title:'Gallery →', link1Sub:'Rooms & details (mocks for now)', link2Title:'Open Dates →', link2Sub:'Calendar and date requests', link3Title:'Area →', link3Sub:'Alboraya, Malva-rosa, Valencia',
+        footerNote:"Got a question? I'll reply myself — contact info coming soon.", footerGuide:'Guest guide →'
+      }
+    };
+    return {
+      lang: this.state.lang, toggleLang: this.toggleLang, toggleMenu: this.toggleMenu,
+      menuOpen: this.state.menuOpen,
+      t: dict[this.state.lang]
+    };
+  }
+}
+
+</script>
+</body>
+</html>

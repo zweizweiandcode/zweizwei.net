@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+a{color:#0e7d78;text-decoration:none}
+a:hover{color:#0a5f5b;text-decoration:underline}
+::selection{background:#f2b877}
+.nav-desktop{display:flex}
+.nav-hamburger{display:none}
+@media (max-width:760px){
+  .nav-desktop{display:none}
+  .nav-hamburger{display:block}
+}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Home.dc.html" style="font-family:'Caveat',cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">{{ t.brand }}</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px">
+      <a href="Home.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navArea }}</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button onClick="{{ toggleLang }}" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer">{{ t.langBtn }}</button>
+      <button onClick="{{ toggleMenu }}" class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px">☰</button>
+    </div>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px">
+      <a href="Home.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:#fff">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navArea }}</a>
+    </nav>
+  </sc-if>
+</header>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
+  <h2 style="font-family:'Caveat',cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">{{ t.kicker }}</h2>
+  <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4vw,42px);color:#23211d;margin:0 0 14px">{{ t.title }}</h1>
+  <p style="font-size:16px;line-height:1.6;color:#3a3733;max-width:640px;margin:0">{{ t.intro }}</p>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:20px 24px 90px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px 28px">
+    <sc-for list="{{ rooms }}" as="room" hint-placeholder-count="7">
+      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate({{ room.rot }})">
+        <div style="position:absolute;top:-10px;left:{{ room.tapeX }};width:44px;height:20px;background:{{ room.tapeColor }};opacity:.88;transform:rotate({{ room.tapeRot }});box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
+        <image-slot id="{{ room.id }}" shape="rect" placeholder="{{ room.ph }}" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px"></image-slot>
+        <div style="padding:12px 6px 4px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;color:#23211d">{{ room.name }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin:36px 0 0;font-size:14px;color:#8a8378;font-style:italic">{{ t.mockNote }}</p>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:'Nunito Sans',sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">{{ t.footerNote }}</p>
+  <a href="Guide.dc.html" style="font-size:13px;color:rgba(255,255,255,.55)">{{ t.footerGuide }}</a>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('apt_site_lang')) || 'ru', menuOpen: false };
+
+  toggleLang = () => {
+    const lang = this.state.lang === 'ru' ? 'en' : 'ru';
+    try { localStorage.setItem('apt_site_lang', lang); } catch(e) {}
+    this.setState({ lang });
+  };
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+
+  renderVals() {
+    const dict = {
+      ru: {
+        brand:'Casa Alboraya', langBtn:'EN', navHome:'Главная', navGallery:'Галерея', navDates:'Даты', navArea:'Район',
+        kicker:'галерея', title:'Комнаты и детали',
+        intro:'Пока здесь моки — явно обозначенные заглушки под будущие настоящие фото. Каждую легко заменить, просто перетащив своё изображение на карточку.',
+        mockNote:'Все фото на этой странице — плейсхолдеры. Никакие изображения интерьеров, кроме моих собственных, здесь не выдаются за фото этой квартиры.',
+        footerNote:'Есть вопрос? Напишу как отвечу — контакт уточню.', footerGuide:'Гид для гостей →',
+        roomNames:{living:'Гостиная',bedroom:'Спальня',kitchen:'Кухня',balcony:'Балкон',terrace:'Терраса',pool:'Бассейн дома',detail:'Деталь дома'}
+      },
+      en: {
+        brand:'Casa Alboraya', langBtn:'RU', navHome:'Home', navGallery:'Gallery', navDates:'Dates', navArea:'Area',
+        kicker:'gallery', title:'Rooms & details',
+        intro:"These are clearly-marked mocks for now, standing in for real photos. Each one is easy to swap — just drag your own picture onto the card.",
+        mockNote:'Every photo on this page is a placeholder. No interior images other than my own are ever presented as photos of this apartment.',
+        footerNote:"Got a question? I'll reply myself — contact info coming soon.", footerGuide:'Guest guide →',
+        roomNames:{living:'Living room',bedroom:'Bedroom',kitchen:'Kitchen',balcony:'Balcony',terrace:'Terrace',pool:'House pool',detail:'House detail'}
+      }
+    };
+    const t = dict[this.state.lang];
+    const defs = [
+      { id:'gallery-living',  key:'living',  rot:'-1.5deg', tapeX:'30px', tapeRot:'-7deg', tapeColor:'#7c9a4a' },
+      { id:'gallery-bedroom', key:'bedroom', rot:'1deg',    tapeX:'50%',  tapeRot:'-4deg', tapeColor:'#d7973f' },
+      { id:'gallery-kitchen', key:'kitchen', rot:'-0.8deg', tapeX:'30px', tapeRot:'6deg',  tapeColor:'#7c9a4a' },
+      { id:'gallery-balcony', key:'balcony', rot:'1.4deg',  tapeX:'50%',  tapeRot:'-8deg', tapeColor:'#7c9a4a' },
+      { id:'gallery-terrace', key:'terrace', rot:'-1deg',   tapeX:'30px', tapeRot:'5deg',  tapeColor:'#d7973f' },
+      { id:'gallery-pool',    key:'pool',    rot:'0.9deg',  tapeX:'50%',  tapeRot:'-5deg', tapeColor:'#7c9a4a' },
+      { id:'gallery-detail',  key:'detail',  rot:'-1.2deg', tapeX:'30px', tapeRot:'7deg',  tapeColor:'#d7973f' }
+    ];
+    const rooms = defs.map(d => ({ id:d.id, rot:d.rot, tapeX:d.tapeX, tapeRot:d.tapeRot, tapeColor:d.tapeColor, name:t.roomNames[d.key], ph:t.roomNames[d.key] }));
+    return { lang:this.state.lang, toggleLang:this.toggleLang, toggleMenu:this.toggleMenu, menuOpen:this.state.menuOpen, t, rooms };
+  }
+}
+
+</script>
+</body>
+</html>

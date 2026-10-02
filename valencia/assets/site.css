@@ -1,0 +1,19 @@
+[hidden] { display: none !important; }
+button, input, textarea { box-sizing: border-box; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #ef8a3d; outline-offset: 4px; }
+.photo-placeholder { position: relative; box-sizing: border-box; display: grid !important; place-items: center; overflow: hidden; background: #eeeae1; border: 2px dashed #c9c2b2; color: #8a8378; text-align: center; font-size: 14px; }
+.photo-placeholder span { padding: 16px; }
+.photo-placeholder img { width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0; background: #eeeae1; }
+.photo-placeholder input { position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+.photo-placeholder:focus-within { outline: 3px solid #ef8a3d; outline-offset: 3px; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 6px; }
+.daybtn { background: white; color: #16918c; border: 2px solid #16918c; }
+.daybtn[data-state="booked"] { background: #d8d4cc; color: #8a8378; border: none; cursor: not-allowed; }
+.daybtn[data-state="selected"] { background: #ef8a3d; color: white; border: none; }
+.daybtn[data-state="pending"] { background: #f2c896; color: #6b4c1f; border: none; cursor: not-allowed; }
+@media(max-width:760px) {
+ .two-columns, .cta-grid { grid-template-columns: minmax(0,1fr) !important; }
+ nav.nav-hamburger { display: flex; }
+ header > div { gap: 8px !important; }
+}
+@media(max-width:420px) { header > a { font-size: 23px !important; } header span { max-width: 95px; } }

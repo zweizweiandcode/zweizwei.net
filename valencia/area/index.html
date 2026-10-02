@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Альборайя, у моря — Casa Alboraya</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/area.css"><link rel="stylesheet" href="../assets/site.css">
+
+<script src="../assets/site.js" defer></script></head>
+<body data-page="area"><div id="app">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="../area/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Район</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="../area/index.html" style="color:#fff">Район</a>
+    </nav>
+  </div>
+</header>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="two-columns">
+  <div style="min-width:0">
+    <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">район</h2>
+    <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 16px">Альборайя, у моря</h1>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0 0 14px">Квартира находится в Альборайе — тихом прибрежном районе рядом с Малва-роса и совсем недалеко от Валенсии. Это не туристический центр, а обычная жизнь у моря: рынок, велодорожки, соседи, которые здороваются.</p>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0">Карта ниже — приблизительная, просто чтобы показать расположение района. Точный адрес и инструкции по входу я присылаю отдельно после подтверждения дат.</p>
+  </div>
+  <div style="position:relative">
+    <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.4deg)">
+      <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Карта района (примерная)"><span>Карта района (примерная)</span></div>
+    </div>
+    <div style="position:absolute;top:-10px;right:34px;width:48px;height:20px;background:#d7973f;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+    <div style="position:absolute;bottom:8px;left:-14px;background:#fff;border-radius:4px;padding:7px 12px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-3deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:18px;color:#16918c">где-то тут ;)</div>
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:30px 24px 90px">
+  <div style="display:flex;flex-wrap:wrap;gap:24px">
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Малва-роса</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Соседний пляжный район — рукой подать.</div>
+      </div>
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Валенсия</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Центр города — близко, удобно доехать.</div>
+      </div>
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Атмосфера</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Тихо, по-соседски, без туристической суеты.</div>
+      </div>
+    
+  </div>
+  <p style="margin:32px 0 0;font-size:14px;color:#8a8378;font-style:italic">Расстояние до пляжа, время в пути и парковку уточню отдельно — эти детали ещё не подтверждены.</p>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+</footer>
+
+</div>
+
+</div>
+<template id="page-ru">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="../area/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Район</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
+      <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
+      <a href="../area/index.html" style="color:#fff">Район</a>
+    </nav>
+  </div>
+</header>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="two-columns">
+  <div style="min-width:0">
+    <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">район</h2>
+    <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 16px">Альборайя, у моря</h1>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0 0 14px">Квартира находится в Альборайе — тихом прибрежном районе рядом с Малва-роса и совсем недалеко от Валенсии. Это не туристический центр, а обычная жизнь у моря: рынок, велодорожки, соседи, которые здороваются.</p>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0">Карта ниже — приблизительная, просто чтобы показать расположение района. Точный адрес и инструкции по входу я присылаю отдельно после подтверждения дат.</p>
+  </div>
+  <div style="position:relative">
+    <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.4deg)">
+      <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Карта района (примерная)"><span>Карта района (примерная)</span></div>
+    </div>
+    <div style="position:absolute;top:-10px;right:34px;width:48px;height:20px;background:#d7973f;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+    <div style="position:absolute;bottom:8px;left:-14px;background:#fff;border-radius:4px;padding:7px 12px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-3deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:18px;color:#16918c">где-то тут ;)</div>
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:30px 24px 90px">
+  <div style="display:flex;flex-wrap:wrap;gap:24px">
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Малва-роса</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Соседний пляжный район — рукой подать.</div>
+      </div>
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Валенсия</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Центр города — близко, удобно доехать.</div>
+      </div>
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Атмосфера</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Тихо, по-соседски, без туристической суеты.</div>
+      </div>
+    
+  </div>
+  <p style="margin:32px 0 0;font-size:14px;color:#8a8378;font-style:italic">Расстояние до пляжа, время в пути и парковку уточню отдельно — эти детали ещё не подтверждены.</p>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+</footer>
+
+</div>
+
+</template><template id="page-en">
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
+      <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
+      <a href="../area/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Area</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">RU</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Menu" aria-controls="mobile-menu" type="button">☰</button>
+    </div>
+  </div>
+  <div data-panel="menuOpen" hidden>
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+      <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
+      <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
+      <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
+      <a href="../area/index.html" style="color:#fff">Area</a>
+    </nav>
+  </div>
+</header>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="two-columns">
+  <div style="min-width:0">
+    <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">the area</h2>
+    <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 16px">Alboraya, by the sea</h1>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0 0 14px">The apartment is in Alboraya — a quiet coastal area next to Malva-rosa and very close to Valencia. Not a tourist strip, just ordinary seaside life: a market, bike lanes, neighbours who say hello.</p>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0">The map below is approximate, just to show roughly where the area is. The exact address and entry instructions are sent separately once dates are confirmed.</p>
+  </div>
+  <div style="position:relative">
+    <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.4deg)">
+      <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Area map (approximate)"><span>Area map (approximate)</span></div>
+    </div>
+    <div style="position:absolute;top:-10px;right:34px;width:48px;height:20px;background:#d7973f;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+    <div style="position:absolute;bottom:8px;left:-14px;background:#fff;border-radius:4px;padding:7px 12px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-3deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:18px;color:#16918c">somewhere around here ;)</div>
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:30px 24px 90px">
+  <div style="display:flex;flex-wrap:wrap;gap:24px">
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Malva-rosa</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">The neighbouring beach area — a short hop away.</div>
+      </div>
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Valencia</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">The city centre is close and easy to reach.</div>
+      </div>
+    
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Feel</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Quiet, neighbourly, no tourist rush.</div>
+      </div>
+    
+  </div>
+  <p style="margin:32px 0 0;font-size:14px;color:#8a8378;font-style:italic">Distance to the beach, travel time and parking to be confirmed separately — not settled yet.</p>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Got a question? I&#x27;ll reply myself — contact info coming soon.</p>
+  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Guest guide →</a>
+</footer>
+
+</div>
+
+</template>
+</body></html>

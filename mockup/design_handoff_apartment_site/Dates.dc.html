@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+a{color:#0e7d78;text-decoration:none}
+a:hover{color:#0a5f5b;text-decoration:underline}
+::selection{background:#f2b877}
+.nav-desktop{display:flex}
+.nav-hamburger{display:none}
+@media (max-width:760px){
+  .nav-desktop{display:none}
+  .nav-hamburger{display:block}
+}
+.daybtn{width:100%;aspect-ratio:1;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Home.dc.html" style="font-family:'Caveat',cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">{{ t.brand }}</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px">
+      <a href="Home.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navArea }}</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button onClick="{{ toggleLang }}" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer">{{ t.langBtn }}</button>
+      <button onClick="{{ toggleMenu }}" class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px">☰</button>
+    </div>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px">
+      <a href="Home.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:#fff">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navArea }}</a>
+    </nav>
+  </sc-if>
+</header>
+
+<section style="max-width:900px;margin:0 auto;padding:56px 24px 10px">
+  <h2 style="font-family:'Caveat',cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">{{ t.kicker }}</h2>
+  <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 12px">{{ t.title }}</h1>
+  <div style="background:#fff4de;border-radius:6px;padding:14px 18px;margin:0 0 24px;font-size:14.5px;line-height:1.6;color:#6b4c1f;font-weight:600">{{ t.confirmNote }}</div>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:0 24px 20px">
+  <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">{{ t.monthLabel }}</div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px">
+      <sc-for list="{{ t.weekdays }}" as="wd" hint-placeholder-count="7">
+        <div style="text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;color:#8a8378;padding:4px 0">{{ wd }}</div>
+      </sc-for>
+    </div>
+    <sc-for list="{{ weeks }}" as="week" hint-placeholder-count="5">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px">
+        <sc-for list="{{ week }}" as="cell" hint-placeholder-count="7">
+          <sc-if value="{{ cell.day }}" hint-placeholder-val="{{ 1 }}">
+            <button onClick="{{ cell.onClick }}" class="daybtn" style="background:{{ cell.bg }};color:{{ cell.fg }};border:{{ cell.border }};opacity:{{ cell.opacity }};cursor:{{ cell.cursor }}" title="{{ cell.title }}">{{ cell.day }}</button>
+          </sc-if>
+        </sc-for>
+      </div>
+    </sc-for>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;padding-top:14px;border-top:1px solid #eee3d0">
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#fff;border:2px solid #16918c;display:inline-block"></span>{{ t.legAvail }}</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#d8d4cc;display:inline-block"></span>{{ t.legBooked }}</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#ef8a3d;display:inline-block"></span>{{ t.legSelected }}</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3a3733"><span style="width:14px;height:14px;border-radius:3px;background:#f2c896;display:inline-block"></span>{{ t.legPending }}</div>
+    </div>
+  </div>
+
+  <p style="font-size:13.5px;line-height:1.6;color:#8a8378;margin:16px 4px 0;font-style:italic">{{ t.icalNote }}</p>
+</section>
+
+<section style="max-width:900px;margin:0 auto;padding:30px 24px 90px">
+  <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#e7f1e0;border-radius:8px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+      <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:#3e6b28;margin-bottom:8px">{{ t.demoTitle }}</div>
+      <p style="font-size:14.5px;line-height:1.6;color:#3a3733;margin:0 0 14px">{{ t.demoBody }}</p>
+      <button onClick="{{ resetForm }}" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;background:#fff;border:1px solid #16918c;color:#16918c;padding:9px 16px;border-radius:8px;cursor:pointer">{{ t.resetBtn }}</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#fff;border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.12);padding:24px 22px">
+      <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:#23211d;margin-bottom:14px">{{ t.formTitle }}</div>
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:420px">
+        <label style="font-size:13px;font-weight:700;color:#3a3733">{{ t.nameLabel }}<input type="text" value="{{ name }}" onChange="{{ onName }}" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:'Nunito Sans',sans-serif"></input></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">{{ t.contactLabel }}<input type="text" value="{{ contact }}" onChange="{{ onContact }}" placeholder="{{ t.contactPh }}" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:'Nunito Sans',sans-serif"></input></label>
+        <label style="font-size:13px;font-weight:700;color:#3a3733">{{ t.msgLabel }}<textarea value="{{ message }}" onChange="{{ onMessage }}" rows="3" style="display:block;width:100%;margin-top:4px;padding:10px 12px;border-radius:6px;border:1.5px solid #ddd6c6;font-size:15px;font-family:'Nunito Sans',sans-serif;resize:vertical"></textarea></label>
+      </div>
+      <div style="margin-top:16px;font-size:13.5px;color:#8a8378">{{ t.selectedLabel }} {{ selectedText }}</div>
+      <button onClick="{{ onSubmit }}" disabled="{{ submitDisabled }}" style="margin-top:16px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;background:{{ submitBg }};color:#fff;border:none;padding:13px 26px;border-radius:9px;cursor:{{ submitCursor }};box-shadow:0 6px 14px rgba(0,0,0,.15)">{{ t.submitBtn }}</button>
+    </div>
+  </sc-if>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:'Nunito Sans',sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">{{ t.footerNote }}</p>
+  <a href="Guide.dc.html" style="font-size:13px;color:rgba(255,255,255,.55)">{{ t.footerGuide }}</a>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    lang: (typeof localStorage!=='undefined' && localStorage.getItem('apt_site_lang')) || 'ru',
+    menuOpen: false, selectedDays: [], submitted: false,
+    name: '', contact: '', message: ''
+  };
+  BOOKED = [3,4,5,14,15,22,23];
+
+  toggleLang = () => {
+    const lang = this.state.lang === 'ru' ? 'en' : 'ru';
+    try { localStorage.setItem('apt_site_lang', lang); } catch(e) {}
+    this.setState({ lang });
+  };
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+  toggleDay = (day) => {
+    if (this.state.submitted) return;
+    this.setState(s => {
+      const has = s.selectedDays.includes(day);
+      return { selectedDays: has ? s.selectedDays.filter(d => d !== day) : [...s.selectedDays, day].sort((a,b)=>a-b) };
+    });
+  };
+  onName = (e) => this.setState({ name: e.target.value });
+  onContact = (e) => this.setState({ contact: e.target.value });
+  onMessage = (e) => this.setState({ message: e.target.value });
+  onSubmit = () => { if (this.state.selectedDays.length) this.setState({ submitted: true }); };
+  resetForm = () => this.setState({ submitted: false, selectedDays: [] });
+
+  renderVals() {
+    const dict = {
+      ru: {
+        brand:'Casa Alboraya', langBtn:'EN', navHome:'Главная', navGallery:'Галерея', navDates:'Даты', navArea:'Район',
+        kicker:'даты', title:'Свободные даты',
+        confirmNote:'Даты подтверждаются после моего ответа. Выбор в календаре — это запрос, а не автоматическая бронь.',
+        monthLabel:'Октябрь 2026 (демо-данные)',
+        weekdays:['Пн','Вт','Ср','Чт','Пт','Сб','Нд'],
+        legAvail:'можно запросить', legBooked:'занято', legSelected:'выбрано', legPending:'ждёт ответа',
+        icalNote:'В будущем сюда можно подключить календарь Booking.com через iCal, чтобы показывать занятые даты. Синхронизация может запаздывать — даже когда календарь подключён, свободная дата означает возможность отправить запрос, а не гарантированную бронь.',
+        demoTitle:'Это демо', demoBody:'В прототипе заявка никуда не отправляется. В реальной версии здесь будет настоящая отправка запроса, а даты останутся в статусе «ждёт ответа», пока я не подтвержу их лично.',
+        resetBtn:'Выбрать другие даты (демо)',
+        formTitle:'Отправить запрос на выбранные даты',
+        nameLabel:'Ваше имя', contactLabel:'Как с вами связаться', contactPh:'email, телефон или мессенджер',
+        msgLabel:'Сообщение (необязательно)',
+        selectedLabel:'Выбранные даты:', submitBtn:'Отправить запрос',
+        footerNote:'Есть вопрос? Напишу как отвечу — контакт уточню.', footerGuide:'Гид для гостей →',
+        noneSelected:'пока не выбраны'
+      },
+      en: {
+        brand:'Casa Alboraya', langBtn:'RU', navHome:'Home', navGallery:'Gallery', navDates:'Dates', navArea:'Area',
+        kicker:'dates', title:'Open dates',
+        confirmNote:"Dates are confirmed after my reply. Picking a date here is a request, not an automatic booking.",
+        monthLabel:'October 2026 (mock data)',
+        weekdays:['Mo','Tu','We','Th','Fr','Sa','Su'],
+        legAvail:'can request', legBooked:'booked', legSelected:'selected', legPending:'awaiting reply',
+        icalNote:"Later this can connect to a Booking.com calendar via iCal to show booked dates. Sync can lag — even once connected, an open date means you can send a request, not a guaranteed booking.",
+        demoTitle:'This is a demo', demoBody:"Nothing is actually sent in this prototype. The real version will send a genuine request, and dates stay “awaiting reply” until I confirm them myself.",
+        resetBtn:'Pick different dates (demo)',
+        formTitle:'Send a request for the selected dates',
+        nameLabel:'Your name', contactLabel:'How to reach you', contactPh:'email, phone or messenger',
+        msgLabel:'Message (optional)',
+        selectedLabel:'Selected dates:', submitBtn:'Send request',
+        footerNote:"Got a question? I'll reply myself — contact info coming soon.", footerGuide:'Guest guide →',
+        noneSelected:'none yet'
+      }
+    };
+    const t = dict[this.state.lang];
+    const first = new Date(2026, 9, 1);
+    const startOffset = (first.getDay() + 6) % 7; // Monday-first
+    const daysInMonth = 31;
+    const cells = [];
+    for (let i = 0; i < startOffset; i++) cells.push({});
+    for (let d = 1; d <= daysInMonth; d++) {
+      const booked = this.BOOKED.includes(d);
+      const selected = this.state.selectedDays.includes(d);
+      const pending = this.state.submitted && selected;
+      let bg = '#fff', fg = '#16918c', border = '2px solid #16918c', opacity = 1, cursor = 'pointer', title = t.legAvail;
+      if (booked) { bg = '#d8d4cc'; fg = '#8a8378'; border = 'none'; cursor = 'not-allowed'; title = t.legBooked; }
+      else if (pending) { bg = '#f2c896'; fg = '#6b4c1f'; border = 'none'; cursor = 'not-allowed'; title = t.legPending; }
+      else if (selected) { bg = '#ef8a3d'; fg = '#fff'; border = 'none'; title = t.legSelected; }
+      cells.push({ day: d, bg, fg, border, opacity, cursor, title, onClick: booked ? undefined : () => this.toggleDay(d) });
+    }
+    while (cells.length % 7 !== 0) cells.push({});
+    const weeks = [];
+    for (let i = 0; i < cells.length; i += 7) weeks.push(cells.slice(i, i+7));
+
+    const selectedText = this.state.selectedDays.length ? this.state.selectedDays.map(d => d + ' окт').join(', ') : t.noneSelected;
+    return {
+      lang: this.state.lang, toggleLang: this.toggleLang, toggleMenu: this.toggleMenu, menuOpen: this.state.menuOpen,
+      t, weeks, submitted: this.state.submitted, notSubmitted: !this.state.submitted,
+      name: this.state.name, contact: this.state.contact, message: this.state.message,
+      onName: this.onName, onContact: this.onContact, onMessage: this.onMessage,
+      selectedText, submitDisabled: this.state.selectedDays.length === 0,
+      submitBg: this.state.selectedDays.length === 0 ? '#c9c2b2' : '#ef8a3d',
+      submitCursor: this.state.selectedDays.length === 0 ? 'not-allowed' : 'pointer',
+      onSubmit: this.onSubmit, resetForm: this.resetForm
+    };
+  }
+}
+
+</script>
+</body>
+</html>

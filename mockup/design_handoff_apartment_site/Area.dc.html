@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+a{color:#0e7d78;text-decoration:none}
+a:hover{color:#0a5f5b;text-decoration:underline}
+::selection{background:#f2b877}
+.nav-desktop{display:flex}
+.nav-hamburger{display:none}
+@media (max-width:760px){
+  .nav-desktop{display:none}
+  .nav-hamburger{display:block}
+}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#fbf9f3">
+
+<header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
+  <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="Home.dc.html" style="font-family:'Caveat',cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">{{ t.brand }}</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px">
+      <a href="Home.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">{{ t.navArea }}</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button onClick="{{ toggleLang }}" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer">{{ t.langBtn }}</button>
+      <button onClick="{{ toggleMenu }}" class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px">☰</button>
+    </div>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px">
+      <a href="Home.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navHome }}</a>
+      <a href="Gallery.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navGallery }}</a>
+      <a href="Dates.dc.html" style="color:rgba(255,255,255,.88)">{{ t.navDates }}</a>
+      <a href="Area.dc.html" style="color:#fff">{{ t.navArea }}</a>
+    </nav>
+  </sc-if>
+</header>
+
+<section style="max-width:1120px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+  <div style="min-width:0">
+    <h2 style="font-family:'Caveat',cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">{{ t.kicker }}</h2>
+    <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 16px">{{ t.title }}</h1>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0 0 14px">{{ t.p1 }}</p>
+    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0">{{ t.p2 }}</p>
+  </div>
+  <div style="position:relative">
+    <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.4deg)">
+      <image-slot id="area-map" shape="rect" placeholder="{{ t.mapPh }}" style="width:100%;aspect-ratio:4/3;display:block"></image-slot>
+    </div>
+    <div style="position:absolute;top:-10px;right:34px;width:48px;height:20px;background:#d7973f;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
+    <div style="position:absolute;bottom:8px;left:-14px;background:#fff;border-radius:4px;padding:7px 12px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-3deg);font-family:'Caveat',cursive;font-weight:700;font-size:18px;color:#16918c">{{ t.mapNote }}</div>
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:30px 24px 90px">
+  <div style="display:flex;flex-wrap:wrap;gap:24px">
+    <sc-for list="{{ t.points }}" as="pt" hint-placeholder-count="3">
+      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">{{ pt.title }}</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">{{ pt.body }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin:32px 0 0;font-size:14px;color:#8a8378;font-style:italic">{{ t.note }}</p>
+</section>
+
+<footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
+  <p style="font-family:'Nunito Sans',sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">{{ t.footerNote }}</p>
+  <a href="Guide.dc.html" style="font-size:13px;color:rgba(255,255,255,.55)">{{ t.footerGuide }}</a>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: (typeof localStorage!=='undefined' && localStorage.getItem('apt_site_lang')) || 'ru', menuOpen: false };
+
+  toggleLang = () => {
+    const lang = this.state.lang === 'ru' ? 'en' : 'ru';
+    try { localStorage.setItem('apt_site_lang', lang); } catch(e) {}
+    this.setState({ lang });
+  };
+  toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+
+  renderVals() {
+    const dict = {
+      ru: {
+        brand:'Casa Alboraya', langBtn:'EN', navHome:'Главная', navGallery:'Галерея', navDates:'Даты', navArea:'Район',
+        kicker:'район', title:'Альборайя, у моря',
+        p1:'Квартира находится в Альборайе — тихом прибрежном районе рядом с Малва-роса и совсем недалеко от Валенсии. Это не туристический центр, а обычная жизнь у моря: рынок, велодорожки, соседи, которые здороваются.',
+        p2:'Карта ниже — приблизительная, просто чтобы показать расположение района. Точный адрес и инструкции по входу я присылаю отдельно после подтверждения дат.',
+        mapPh:'Карта района (примерная)', mapNote:'где-то тут ;)',
+        points:[
+          {title:'Малва-роса', body:'Соседний пляжный район — рукой подать.'},
+          {title:'Валенсия', body:'Центр города — близко, удобно доехать.'},
+          {title:'Атмосфера', body:'Тихо, по-соседски, без туристической суеты.'}
+        ],
+        note:'Расстояние до пляжа, время в пути и парковку уточню отдельно — эти детали ещё не подтверждены.',
+        footerNote:'Есть вопрос? Напишу как отвечу — контакт уточню.', footerGuide:'Гид для гостей →'
+      },
+      en: {
+        brand:'Casa Alboraya', langBtn:'RU', navHome:'Home', navGallery:'Gallery', navDates:'Dates', navArea:'Area',
+        kicker:'the area', title:'Alboraya, by the sea',
+        p1:"The apartment is in Alboraya — a quiet coastal area next to Malva-rosa and very close to Valencia. Not a tourist strip, just ordinary seaside life: a market, bike lanes, neighbours who say hello.",
+        p2:"The map below is approximate, just to show roughly where the area is. The exact address and entry instructions are sent separately once dates are confirmed.",
+        mapPh:'Area map (approximate)', mapNote:'somewhere around here ;)',
+        points:[
+          {title:'Malva-rosa', body:'The neighbouring beach area — a short hop away.'},
+          {title:'Valencia', body:'The city centre is close and easy to reach.'},
+          {title:'Feel', body:'Quiet, neighbourly, no tourist rush.'}
+        ],
+        note:"Distance to the beach, travel time and parking to be confirmed separately — not settled yet.",
+        footerNote:"Got a question? I'll reply myself — contact info coming soon.", footerGuide:'Guest guide →'
+      }
+    };
+    return { lang:this.state.lang, toggleLang:this.toggleLang, toggleMenu:this.toggleMenu, menuOpen:this.state.menuOpen, t: dict[this.state.lang] };
+  }
+}
+
+</script>
+</body>
+</html>
