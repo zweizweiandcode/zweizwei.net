@@ -1,29 +1,32 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Комнаты и детали — Casa Alboraya</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/gallery.css"><link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/typography.css">
+<link rel="preload" href="../assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
 
-<script src="../assets/site.js" defer></script></head>
+<script src="../assets/site.js" defer></script>
+<script src="../assets/gallery.js" defer></script><meta name="robots" content="noindex, nofollow">
+</head>
 <body data-page="gallery"><div id="app">
 <div style="min-height:100vh;background:#fbf9f3">
 
 <header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
   <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
-    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+    <a class="site-logo" href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
       <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
-      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+      <button style="background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
     </div>
   </div>
   <div data-panel="menuOpen" hidden>
-    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px" id="mobile-menu">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:#fff">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
@@ -33,63 +36,74 @@
 </header>
 
 <section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
-  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">галерея</h2>
-  <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,42px);color:#23211d;margin:0 0 14px">Комнаты и детали</h1>
-  <p style="font-size:16px;line-height:1.6;color:#3a3733;max-width:640px;margin:0">Пока здесь моки — явно обозначенные заглушки под будущие настоящие фото. Каждую легко заменить, просто перетащив своё изображение на карточку.</p>
+  <h2 style="color:#16918c;margin:0 0 4px">галерея</h2>
+  <h1 style="color:#23211d;margin:0 0 14px">Комнаты и детали</h1>
+  <p class="approved-copy">Фотографии и подробности о квартире.</p>
 </section>
-
-<section style="max-width:1120px;margin:0 auto;padding:20px 24px 90px">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px 28px">
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1.5deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-7deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Гостиная"><span>Гостиная</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Гостиная</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(1deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(-4deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Спальня"><span>Спальня</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Спальня</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-0.8deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Кухня"><span>Кухня</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Кухня</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(1.4deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-8deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Балкон"><span>Балкон</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Балкон</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(5deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Терраса"><span>Терраса</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Терраса</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(0.9deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-5deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Бассейн дома"><span>Бассейн дома</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Бассейн дома</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1.2deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(7deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Деталь дома"><span>Деталь дома</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Деталь дома</div>
-      </div>
-    
-  </div>
-  <p style="margin:36px 0 0;font-size:14px;color:#8a8378;font-style:italic">Все фото на этой странице — плейсхолдеры. Никакие изображения интерьеров, кроме моих собственных, здесь не выдаются за фото этой квартиры.</p>
-</section>
+<section class="gallery-section"><div class="room-grid"><article class="room-card" style="transform:rotate(-1.5deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Основная спальня"><img class="apartment-photo" src="../../images/valencia/bedroom-with-rugs.png" alt="Основная спальня" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Основная спальня</span></button><template class="gallery-detail"><h2>Основная спальня</h2>
+<p>В спальне находится двуспальная кровать шириной 145 см, прикроватная мебель и телевизор с DVD-плеером. Есть небольшая коллекция фильмов на дисках.</p>
+<p>На окнах установлены рольставни, поэтому комнату можно затемнить для сна. Также есть постельное бельё и полотенца.</p>
+<p>Обратите внимание: шкаф в этой спальне занят личными вещами. Для хранения одежды можно использовать шкаф в соседней комнате или на большой террасе.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Малая спальня и рабочее место"><img class="apartment-photo" src="../../images/valencia/Warm%20Minimalist%20Bedroom%20Office%20Corner.png" alt="Малая спальня и рабочее место" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Малая спальня и рабочее место</span></button><template class="gallery-detail"><h2>Малая спальня и рабочее место</h2>
+<p>Эту комнату можно использовать как спальню или кабинет. Здесь стоит раскладная кровать, которая превращается в двуспальную шириной 160 см.</p>
+<p>Рядом с окном расположено рабочее место со столом и офисным креслом. Здесь можно спокойно поработать за ноутбуком.</p>
+<p>В комнате также есть шкаф для одежды, комод и дополнительное освещение. На окнах установлены рольставни для затемнения.</p>
+<p>Кровать можно оставлять сложенной, чтобы в комнате было больше свободного пространства, или разложить для сна.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-0.8deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Гостиная и обеденная зона"><img class="apartment-photo" src="../../images/valencia/main-room-1.png" alt="Гостиная и обеденная зона" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Гостиная и обеденная зона</span></button><template class="gallery-detail"><h2>Гостиная и обеденная зона</h2>
+<p>В гостиной есть диван, который раскладывается в спальное место шириной 120 см. Рядом расположены телевизор с доступом к интернету, книжные полки и мебель для хранения.</p>
+<p>Здесь же находится обеденный стол со стульями, за которым можно поесть, поработать или провести вечер вместе.</p>
+<p>В журнальном столике хранятся настольные игры, в том числе Ticket to Ride, Atomic Kittens и другие.</p>
+<p>Для сна можно использовать раскладной диван.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1.4deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Кухня"><img class="apartment-photo" src="../../images/valencia/kitchen-gpt2.png" alt="Кухня" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Кухня</span></button><template class="gallery-detail"><h2>Кухня</h2>
+<p>На кухне есть всё необходимое для приготовления еды: варочная поверхность, духовка, вытяжка, холодильник, микроволновка и посудомоечная машина.</p>
+<p>Для кофе есть две кофеварки — капсульная Nespresso и обычная фильтр-кофеварка. Также есть электрический чайник и тостер.</p>
+<p>В шкафах хранится посуда для приготовления и сервировки: кастрюли, сковородки, тарелки, чашки, бокалы и столовые приборы.</p>
+<p>Из кухни есть выход на небольшой технический балкон, где находятся стиральная машина, раковина, котёл и кладовка с хозяйственными принадлежностями.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Ванные комнаты — 1"><img class="apartment-photo" src="../../images/valencia/master-bathroom.png" alt="Ванные комнаты — 1" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Ванные комнаты — 1</span></button><template class="gallery-detail"><h2>Ванные комнаты</h2>
+<p>В квартире две ванные комнаты, обе с душем, раковиной и туалетом.</p>
+<p>В основной ванной установлена душевая кабина со стеклянными перегородками и зеркало.</p>
+<p>Во второй ванной душевая зона отделена шторкой. Есть зеркало и полочки для принадлежностей.</p>
+<p>В квартире также есть фен и полотенца.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Ванные комнаты — 2"><img class="apartment-photo" src="../../images/valencia/bathroom-small.png" alt="Ванные комнаты — 2" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Ванные комнаты — 2</span></button><template class="gallery-detail"><h2>Ванные комнаты</h2>
+<p>В квартире две ванные комнаты, обе с душем, раковиной и туалетом.</p>
+<p>В основной ванной установлена душевая кабина со стеклянными перегородками и зеркало.</p>
+<p>Во второй ванной душевая зона отделена шторкой. Есть зеркало и полочки для принадлежностей.</p>
+<p>В квартире также есть фен и полотенца.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(0.9deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Застеклённый балкон — 1"><img class="apartment-photo" src="../../images/valencia/sofa-balcony-vertical.png" alt="Застеклённый балкон — 1" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Застеклённый балкон — 1</span></button><template class="gallery-detail"><h2>Застеклённый балкон</h2>
+<p>Одно из моих любимых мест в квартире. Здесь много солнца, приятно пить утренний кофе, читать или работать за ноутбуком.</p>
+<p>На балконе есть диван, который раскладывается в спальное место шириной 120 см, небольшой столик, освещение и электрические розетки.</p>
+<p>Благодаря остеклению здесь можно проводить время даже в прохладную или ветреную погоду.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(0.9deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Застеклённый балкон — 2"><img class="apartment-photo" src="../../images/valencia/sofa-balcony-square.png" alt="Застеклённый балкон — 2" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Застеклённый балкон — 2</span></button><template class="gallery-detail"><h2>Застеклённый балкон</h2>
+<p>Одно из моих любимых мест в квартире. Здесь много солнца, приятно пить утренний кофе, читать или работать за ноутбуком.</p>
+<p>На балконе есть диван, который раскладывается в спальное место шириной 120 см, небольшой столик, освещение и электрические розетки.</p>
+<p>Благодаря остеклению здесь можно проводить время даже в прохладную или ветреную погоду.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1.2deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Большая терраса"><img class="apartment-photo" src="../../images/valencia/terrace-gpt.png" alt="Большая терраса" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Большая терраса</span></button><template class="gallery-detail"><h2>Большая терраса</h2>
+<p>На большой террасе есть крытая зона отдыха с диваном, который раскладывается в спальное место шириной 120 см. Здесь также находятся обеденный стол со стульями и переносной кондиционер.</p>
+<p>В открытой части террасы стоят шезлонги, есть душ, освещение и электрические розетки. Здесь приятно позавтракать, почитать или отдохнуть на свежем воздухе.</p>
+<p>На террасе также есть большой шкаф для хранения вещей.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1.5deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Технический балкон"><img class="apartment-photo" src="../../images/valencia/gpt-balcony.png" alt="Технический балкон" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Технический балкон</span></button><template class="gallery-detail"><h2>Технический балкон</h2>
+<p>Из кухни есть выход на небольшой технический балкон. Здесь находятся стиральная машина, котёл, техническая раковина и небольшая кладовка.</p>
+<p>Также в квартире есть сушилка для белья, утюг, гладильная доска, пылесос и принадлежности для уборки.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Бассейн и пляж"><img class="apartment-photo" src="../../images/valencia/pool%20-%20color%20corrected.png" alt="Бассейн" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Бассейн и пляж</span></button><template class="gallery-detail"><h2>Бассейн и пляж</h2>
+<p>В жилом комплексе есть бассейн, которым можно пользоваться.</p>
+<p>До моря недалеко, на пляж можно ходить пешком. Мне особенно нравится гулять у моря — это помогает расслабиться и отвлечься от повседневных дел.</p>
+<p>В квартире есть пляжные полотенца, зонтик, складные стулья и другие пляжные принадлежности, которые можно брать с собой.</p>
+</template></article>
+</div></section>
 
 <footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
-  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
-  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+  <p style="color:rgba(255,255,255,.85);margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="color:rgba(255,255,255,.55)">Гид для гостей →</a>
 </footer>
 
 </div>
@@ -100,20 +114,20 @@
 
 <header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
   <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
-    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+    <a class="site-logo" href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
       <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Район</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
-      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+      <button style="background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
     </div>
   </div>
   <div data-panel="menuOpen" hidden>
-    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px" id="mobile-menu">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:#fff">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
@@ -123,86 +137,98 @@
 </header>
 
 <section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
-  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">галерея</h2>
-  <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,42px);color:#23211d;margin:0 0 14px">Комнаты и детали</h1>
-  <p style="font-size:16px;line-height:1.6;color:#3a3733;max-width:640px;margin:0">Пока здесь моки — явно обозначенные заглушки под будущие настоящие фото. Каждую легко заменить, просто перетащив своё изображение на карточку.</p>
+  <h2 style="color:#16918c;margin:0 0 4px">галерея</h2>
+  <h1 style="color:#23211d;margin:0 0 14px">Комнаты и детали</h1>
+  <p class="approved-copy">Фотографии и подробности о квартире.</p>
 </section>
-
-<section style="max-width:1120px;margin:0 auto;padding:20px 24px 90px">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px 28px">
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1.5deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-7deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Гостиная"><span>Гостиная</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Гостиная</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(1deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(-4deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Спальня"><span>Спальня</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Спальня</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-0.8deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Кухня"><span>Кухня</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Кухня</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(1.4deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-8deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Балкон"><span>Балкон</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Балкон</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(5deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Терраса"><span>Терраса</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Терраса</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(0.9deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-5deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Бассейн дома"><span>Бассейн дома</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Бассейн дома</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1.2deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(7deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Деталь дома"><span>Деталь дома</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Деталь дома</div>
-      </div>
-    
-  </div>
-  <p style="margin:36px 0 0;font-size:14px;color:#8a8378;font-style:italic">Все фото на этой странице — плейсхолдеры. Никакие изображения интерьеров, кроме моих собственных, здесь не выдаются за фото этой квартиры.</p>
-</section>
+<section class="gallery-section"><div class="room-grid"><article class="room-card" style="transform:rotate(-1.5deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Основная спальня"><img class="apartment-photo" src="../../images/valencia/bedroom-with-rugs.png" alt="Основная спальня" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Основная спальня</span></button><template class="gallery-detail"><h2>Основная спальня</h2>
+<p>В спальне находится двуспальная кровать шириной 145 см, прикроватная мебель и телевизор с DVD-плеером. Есть небольшая коллекция фильмов на дисках.</p>
+<p>На окнах установлены рольставни, поэтому комнату можно затемнить для сна. Также есть постельное бельё и полотенца.</p>
+<p>Обратите внимание: шкаф в этой спальне занят личными вещами. Для хранения одежды можно использовать шкаф в соседней комнате или на большой террасе.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Малая спальня и рабочее место"><img class="apartment-photo" src="../../images/valencia/Warm%20Minimalist%20Bedroom%20Office%20Corner.png" alt="Малая спальня и рабочее место" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Малая спальня и рабочее место</span></button><template class="gallery-detail"><h2>Малая спальня и рабочее место</h2>
+<p>Эту комнату можно использовать как спальню или кабинет. Здесь стоит раскладная кровать, которая превращается в двуспальную шириной 160 см.</p>
+<p>Рядом с окном расположено рабочее место со столом и офисным креслом. Здесь можно спокойно поработать за ноутбуком.</p>
+<p>В комнате также есть шкаф для одежды, комод и дополнительное освещение. На окнах установлены рольставни для затемнения.</p>
+<p>Кровать можно оставлять сложенной, чтобы в комнате было больше свободного пространства, или разложить для сна.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-0.8deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Гостиная и обеденная зона"><img class="apartment-photo" src="../../images/valencia/main-room-1.png" alt="Гостиная и обеденная зона" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Гостиная и обеденная зона</span></button><template class="gallery-detail"><h2>Гостиная и обеденная зона</h2>
+<p>В гостиной есть диван, который раскладывается в спальное место шириной 120 см. Рядом расположены телевизор с доступом к интернету, книжные полки и мебель для хранения.</p>
+<p>Здесь же находится обеденный стол со стульями, за которым можно поесть, поработать или провести вечер вместе.</p>
+<p>В журнальном столике хранятся настольные игры, в том числе Ticket to Ride, Atomic Kittens и другие.</p>
+<p>Для сна можно использовать раскладной диван.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1.4deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Кухня"><img class="apartment-photo" src="../../images/valencia/kitchen-gpt2.png" alt="Кухня" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Кухня</span></button><template class="gallery-detail"><h2>Кухня</h2>
+<p>На кухне есть всё необходимое для приготовления еды: варочная поверхность, духовка, вытяжка, холодильник, микроволновка и посудомоечная машина.</p>
+<p>Для кофе есть две кофеварки — капсульная Nespresso и обычная фильтр-кофеварка. Также есть электрический чайник и тостер.</p>
+<p>В шкафах хранится посуда для приготовления и сервировки: кастрюли, сковородки, тарелки, чашки, бокалы и столовые приборы.</p>
+<p>Из кухни есть выход на небольшой технический балкон, где находятся стиральная машина, раковина, котёл и кладовка с хозяйственными принадлежностями.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Ванные комнаты — 1"><img class="apartment-photo" src="../../images/valencia/master-bathroom.png" alt="Ванные комнаты — 1" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Ванные комнаты — 1</span></button><template class="gallery-detail"><h2>Ванные комнаты</h2>
+<p>В квартире две ванные комнаты, обе с душем, раковиной и туалетом.</p>
+<p>В основной ванной установлена душевая кабина со стеклянными перегородками и зеркало.</p>
+<p>Во второй ванной душевая зона отделена шторкой. Есть зеркало и полочки для принадлежностей.</p>
+<p>В квартире также есть фен и полотенца.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Ванные комнаты — 2"><img class="apartment-photo" src="../../images/valencia/bathroom-small.png" alt="Ванные комнаты — 2" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Ванные комнаты — 2</span></button><template class="gallery-detail"><h2>Ванные комнаты</h2>
+<p>В квартире две ванные комнаты, обе с душем, раковиной и туалетом.</p>
+<p>В основной ванной установлена душевая кабина со стеклянными перегородками и зеркало.</p>
+<p>Во второй ванной душевая зона отделена шторкой. Есть зеркало и полочки для принадлежностей.</p>
+<p>В квартире также есть фен и полотенца.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(0.9deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Застеклённый балкон — 1"><img class="apartment-photo" src="../../images/valencia/sofa-balcony-vertical.png" alt="Застеклённый балкон — 1" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Застеклённый балкон — 1</span></button><template class="gallery-detail"><h2>Застеклённый балкон</h2>
+<p>Одно из моих любимых мест в квартире. Здесь много солнца, приятно пить утренний кофе, читать или работать за ноутбуком.</p>
+<p>На балконе есть диван, который раскладывается в спальное место шириной 120 см, небольшой столик, освещение и электрические розетки.</p>
+<p>Благодаря остеклению здесь можно проводить время даже в прохладную или ветреную погоду.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(0.9deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Застеклённый балкон — 2"><img class="apartment-photo" src="../../images/valencia/sofa-balcony-square.png" alt="Застеклённый балкон — 2" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Застеклённый балкон — 2</span></button><template class="gallery-detail"><h2>Застеклённый балкон</h2>
+<p>Одно из моих любимых мест в квартире. Здесь много солнца, приятно пить утренний кофе, читать или работать за ноутбуком.</p>
+<p>На балконе есть диван, который раскладывается в спальное место шириной 120 см, небольшой столик, освещение и электрические розетки.</p>
+<p>Благодаря остеклению здесь можно проводить время даже в прохладную или ветреную погоду.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1.2deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Большая терраса"><img class="apartment-photo" src="../../images/valencia/terrace-gpt.png" alt="Большая терраса" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Большая терраса</span></button><template class="gallery-detail"><h2>Большая терраса</h2>
+<p>На большой террасе есть крытая зона отдыха с диваном, который раскладывается в спальное место шириной 120 см. Здесь также находятся обеденный стол со стульями и переносной кондиционер.</p>
+<p>В открытой части террасы стоят шезлонги, есть душ, освещение и электрические розетки. Здесь приятно позавтракать, почитать или отдохнуть на свежем воздухе.</p>
+<p>На террасе также есть большой шкаф для хранения вещей.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1.5deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Технический балкон"><img class="apartment-photo" src="../../images/valencia/gpt-balcony.png" alt="Технический балкон" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Технический балкон</span></button><template class="gallery-detail"><h2>Технический балкон</h2>
+<p>Из кухни есть выход на небольшой технический балкон. Здесь находятся стиральная машина, котёл, техническая раковина и небольшая кладовка.</p>
+<p>Также в квартире есть сушилка для белья, утюг, гладильная доска, пылесос и принадлежности для уборки.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Бассейн и пляж"><img class="apartment-photo" src="../../images/valencia/pool%20-%20color%20corrected.png" alt="Бассейн" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Бассейн и пляж</span></button><template class="gallery-detail"><h2>Бассейн и пляж</h2>
+<p>В жилом комплексе есть бассейн, которым можно пользоваться.</p>
+<p>До моря недалеко, на пляж можно ходить пешком. Мне особенно нравится гулять у моря — это помогает расслабиться и отвлечься от повседневных дел.</p>
+<p>В квартире есть пляжные полотенца, зонтик, складные стулья и другие пляжные принадлежности, которые можно брать с собой.</p>
+</template></article>
+</div></section>
 
 <footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
-  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
-  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+  <p style="color:rgba(255,255,255,.85);margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="color:rgba(255,255,255,.55)">Гид для гостей →</a>
 </footer>
 
 </div>
 
-</template><template id="page-en">
+</template>
+<template id="page-en">
 <div style="min-height:100vh;background:#fbf9f3">
 
 <header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
   <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
-    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+    <a class="site-logo" href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
       <a href="../gallery/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Gallery</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
       <a href="../area/index.html" style="color:rgba(255,255,255,.88)">Area</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">RU</button>
-      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Menu" aria-controls="mobile-menu" type="button">☰</button>
+      <button style="background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">RU</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Menu" aria-controls="mobile-menu" type="button">☰</button>
     </div>
   </div>
   <div data-panel="menuOpen" hidden>
-    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px" id="mobile-menu">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
       <a href="../gallery/index.html" style="color:#fff">Gallery</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
@@ -212,63 +238,74 @@
 </header>
 
 <section style="max-width:1120px;margin:0 auto;padding:56px 24px 20px">
-  <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">gallery</h2>
-  <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,42px);color:#23211d;margin:0 0 14px">Rooms &amp; details</h1>
-  <p style="font-size:16px;line-height:1.6;color:#3a3733;max-width:640px;margin:0">These are clearly-marked mocks for now, standing in for real photos. Each one is easy to swap — just drag your own picture onto the card.</p>
+  <h2 style="color:#16918c;margin:0 0 4px">gallery</h2>
+  <h1 style="color:#23211d;margin:0 0 14px">Rooms &amp; details</h1>
+  <p class="approved-copy">Photos and details of the apartment.</p>
 </section>
-
-<section style="max-width:1120px;margin:0 auto;padding:20px 24px 90px">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px 28px">
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1.5deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-7deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Living room"><span>Living room</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Living room</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(1deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(-4deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Bedroom"><span>Bedroom</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Bedroom</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-0.8deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Kitchen"><span>Kitchen</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Kitchen</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(1.4deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-8deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Balcony"><span>Balcony</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Balcony</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(5deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="Terrace"><span>Terrace</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">Terrace</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(0.9deg)">
-        <div style="position:absolute;top:-10px;left:50%;width:44px;height:20px;background:#7c9a4a;opacity:.88;transform:rotate(-5deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="House pool"><span>House pool</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">House pool</div>
-      </div>
-    
-      <div style="position:relative;background:#fff;padding:10px;border-radius:5px;box-shadow:0 12px 26px rgba(0,0,0,.14);transform:rotate(-1.2deg)">
-        <div style="position:absolute;top:-10px;left:30px;width:44px;height:20px;background:#d7973f;opacity:.88;transform:rotate(7deg);box-shadow:0 3px 6px rgba(0,0,0,.25);z-index:2"></div>
-        <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block;border-radius:2px" role="img" aria-label="House detail"><span>House detail</span></div>
-        <div style="padding:12px 6px 4px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:15px;color:#23211d">House detail</div>
-      </div>
-    
-  </div>
-  <p style="margin:36px 0 0;font-size:14px;color:#8a8378;font-style:italic">Every photo on this page is a placeholder. No interior images other than my own are ever presented as photos of this apartment.</p>
-</section>
+<section class="gallery-section"><div class="room-grid"><article class="room-card" style="transform:rotate(-1.5deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Master bedroom"><img class="apartment-photo" src="../../images/valencia/bedroom-with-rugs.png" alt="Master bedroom" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Master bedroom</span></button><template class="gallery-detail"><h2>Master bedroom</h2>
+<p>The bedroom has a double bed 145 cm wide, bedside furniture, and a TV with a DVD player. There is also a small collection of films on DVD.</p>
+<p>The windows have roller shutters to darken the room for sleeping. Bed linen and towels are also available.</p>
+<p>Please note: the wardrobe in this bedroom is used for personal belongings. You can use the wardrobe in the smaller bedroom or the large storage cabinet on the terrace instead.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Smaller bedroom and workspace"><img class="apartment-photo" src="../../images/valencia/Warm%20Minimalist%20Bedroom%20Office%20Corner.png" alt="Smaller bedroom and workspace" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Smaller bedroom and workspace</span></button><template class="gallery-detail"><h2>Smaller bedroom and workspace</h2>
+<p>This room can be used as either a bedroom or a study. It has a folding bed that opens into a double bed 160 cm wide.</p>
+<p>By the window there is a workspace with a desk and an office chair, where you can work on a laptop.</p>
+<p>The room also has a wardrobe, a chest of drawers and additional lighting. There are roller shutters to darken the windows.</p>
+<p>You can keep the bed folded to free up space, or unfold it for sleeping.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-0.8deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Living and dining room"><img class="apartment-photo" src="../../images/valencia/main-room-1.png" alt="Living and dining room" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Living and dining room</span></button><template class="gallery-detail"><h2>Living and dining room</h2>
+<p>The living room has a sofa bed that unfolds into a 120 cm-wide sleeping space. There is also an internet-connected TV, bookshelves and storage furniture.</p>
+<p>The dining table and chairs can be used for meals, work or spending an evening together.</p>
+<p>Board games are kept inside the coffee table, including Ticket to Ride, Atomic Kittens and others.</p>
+<p>The sofa can also be unfolded for sleeping.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1.4deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Kitchen"><img class="apartment-photo" src="../../images/valencia/kitchen-gpt2.png" alt="Kitchen" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Kitchen</span></button><template class="gallery-detail"><h2>Kitchen</h2>
+<p>The kitchen has everything needed to cook: a hob, oven, extractor hood, fridge, microwave and dishwasher.</p>
+<p>For coffee, there is a Nespresso capsule machine and a filter coffee maker. There is also an electric kettle and a toaster.</p>
+<p>The cupboards contain cookware and tableware, including pots, pans, plates, cups, glasses and cutlery.</p>
+<p>The kitchen opens onto a small utility balcony with a washing machine, utility sink, boiler and storage space for household supplies.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Bathrooms — 1"><img class="apartment-photo" src="../../images/valencia/master-bathroom.png" alt="Bathrooms — 1" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Bathrooms — 1</span></button><template class="gallery-detail"><h2>Bathrooms</h2>
+<p>There are two bathrooms in the apartment. Both have a shower, sink and toilet.</p>
+<p>The main bathroom has a shower enclosure with glass panels and a mirror.</p>
+<p>The second bathroom has a shower with a curtain, a mirror and shelves for toiletries.</p>
+<p>A hairdryer and towels are also available.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Bathrooms — 2"><img class="apartment-photo" src="../../images/valencia/bathroom-small.png" alt="Bathrooms — 2" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Bathrooms — 2</span></button><template class="gallery-detail"><h2>Bathrooms</h2>
+<p>There are two bathrooms in the apartment. Both have a shower, sink and toilet.</p>
+<p>The main bathroom has a shower enclosure with glass panels and a mirror.</p>
+<p>The second bathroom has a shower with a curtain, a mirror and shelves for toiletries.</p>
+<p>A hairdryer and towels are also available.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(0.9deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Glazed balcony — 1"><img class="apartment-photo" src="../../images/valencia/sofa-balcony-vertical.png" alt="Glazed balcony — 1" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Glazed balcony — 1</span></button><template class="gallery-detail"><h2>Glazed balcony</h2>
+<p>One of my favourite places in the apartment. It gets lots of sunshine and is a lovely spot for morning coffee, reading or working on a laptop.</p>
+<p>There is a sofa that unfolds into a 120 cm-wide sleeping space, a small table, lighting and power sockets.</p>
+<p>Because the balcony is glazed, you can also spend time here when the weather is cooler or windy.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(0.9deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Glazed balcony — 2"><img class="apartment-photo" src="../../images/valencia/sofa-balcony-square.png" alt="Glazed balcony — 2" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Glazed balcony — 2</span></button><template class="gallery-detail"><h2>Glazed balcony</h2>
+<p>One of my favourite places in the apartment. It gets lots of sunshine and is a lovely spot for morning coffee, reading or working on a laptop.</p>
+<p>There is a sofa that unfolds into a 120 cm-wide sleeping space, a small table, lighting and power sockets.</p>
+<p>Because the balcony is glazed, you can also spend time here when the weather is cooler or windy.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1.2deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Large terrace"><img class="apartment-photo" src="../../images/valencia/terrace-gpt.png" alt="Large terrace" width="1086" height="1448" decoding="async" loading="lazy"><span class="gallery-caption">Large terrace</span></button><template class="gallery-detail"><h2>Large terrace</h2>
+<p>The large terrace has a covered seating area with a sofa that unfolds into a 120 cm-wide sleeping space. There is also a dining table with chairs and a portable air conditioner.</p>
+<p>The open part of the terrace has loungers, a shower, lighting and power sockets. It is a nice place for breakfast, reading or relaxing outdoors.</p>
+<p>There is also a large storage cabinet on the terrace.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(-1.5deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Utility balcony"><img class="apartment-photo" src="../../images/valencia/gpt-balcony.png" alt="Utility balcony" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Utility balcony</span></button><template class="gallery-detail"><h2>Utility balcony</h2>
+<p>A small utility balcony is accessible from the kitchen. It contains the washing machine, boiler, utility sink and a small storage area.</p>
+<p>The apartment also has a clothes-drying rack, iron, ironing board, vacuum cleaner and cleaning supplies.</p>
+</template></article>
+<article class="room-card" style="transform:rotate(1deg)"><span class="paper-tape" aria-hidden="true"></span><button type="button" class="gallery-trigger" aria-haspopup="dialog" aria-label="Pool and beach"><img class="apartment-photo" src="../../images/valencia/pool%20-%20color%20corrected.png" alt="Swimming pool" width="1254" height="1254" decoding="async" loading="lazy"><span class="gallery-caption">Pool and beach</span></button><template class="gallery-detail"><h2>Pool and beach</h2>
+<p>The residential complex has a swimming pool you can use.</p>
+<p>The sea is not far away, and you can walk to the beach. I especially enjoy walking by the sea — it helps me relax and switch off from everyday life.</p>
+<p>There are beach towels, an umbrella, folding chairs and other beach items in the apartment that you can take with you.</p>
+</template></article>
+</div></section>
 
 <footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
-  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Got a question? I&#x27;ll reply myself — contact info coming soon.</p>
-  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Guest guide →</a>
+  <p style="color:rgba(255,255,255,.85);margin:0 0 8px">Got a question? I&#x27;ll reply myself — contact info coming soon.</p>
+  <a href="../guide/index.html" style="color:rgba(255,255,255,.55)">Guest guide →</a>
 </footer>
 
 </div>

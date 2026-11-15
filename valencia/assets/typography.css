@@ -1,0 +1,74 @@
+@font-face {
+  font-family:'Manrope';
+  src:url('./fonts/Manrope-Variable.ttf') format('truetype');
+  font-style:normal;
+  font-weight:200 800;
+  font-display:swap;
+}
+@font-face {
+  font-family:'Caveat';
+  src:url('./fonts/Caveat-Variable.ttf') format('truetype');
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+}
+:root {
+  --site-font:'Manrope',sans-serif;
+  --section-title:clamp(28px,2.6vw + 12px,36px);
+}
+body {
+  font-family:var(--site-font);
+  font-size:18px;
+  font-weight:400;
+  line-height:1.6;
+}
+button, input, textarea, select { font-family:var(--site-font); }
+input, textarea, select { font-size:18px; line-height:1.6; font-weight:400; }
+button { font-size:18px; line-height:1.4; font-weight:600; }
+body p, body li, body .approved-copy { font-size:18px; line-height:1.6; font-weight:400; }
+body h1, body h2, body h3, body h4 {
+  font-family:var(--site-font); font-weight:700; line-height:1.25;
+}
+body h1, body h2, body .approved-copy h2 { font-size:var(--section-title); }
+body h3 { font-size:var(--section-title); }
+body h4 { font-size:20px; }
+body .hero-section h1 { font-size:clamp(34px,4.5vw,54px); }
+body nav { font-family:var(--site-font); font-size:18px; font-weight:600; line-height:1.4; }
+body .site-logo { font-family:'Caveat',cursive; }
+body [data-action="toggleLang"] { font-size:16px; }
+body button.nav-hamburger { font-size:24px; }
+body header { line-height:1.3; }
+body footer, body footer p, body footer a { font-size:16px; line-height:1.6; }
+body .daybtn { font-size:17px; font-weight:600; }
+body .gallery-caption, body .room-description, body .room-description p,
+body .gallery-dialog-copy, body .gallery-dialog-copy p {
+  font-family:var(--site-font); font-size:17px; line-height:1.6;
+}
+body .gallery-caption { font-weight:600; }
+body .area-map { font-family:var(--site-font); }
+body .area-place h3, body .area-popup h3 { font-family:var(--site-font); font-size:18px; line-height:1.4; }
+body .area-place p, body .area-popup p, body .area-map-hint, body .area-status,
+body .area-place a, body .area-place-links { font-size:16px; line-height:1.6; }
+body .area-yego-link { font-size:17px; }
+body .area-place-number, body .area-map-marker span { font-family:var(--site-font); font-size:16px; }
+body .area-map .leaflet-control-attribution { font-size:11px; line-height:1.5; }
+/* The small section labels keep their supporting role beside the page title. */
+body[data-page="gallery"] section > h2,
+body[data-page="dates"] section > h2,
+body[data-page="guide"] section > h2 { font-size:17px; font-weight:600; }
+body .cta-grid > a > div:first-child { font-size:24px; font-weight:600; line-height:1.3; }
+body .cta-grid > a > div + div { font-size:16px; line-height:1.6; }
+body .home-copy-section { padding-block:40px; }
+body[data-page="home"] #app .home-copy-section:has(.text-block) { padding-top:24px !important; }
+body .gallery-section { padding-bottom:56px; }
+body .area-intro, body .area-places { padding-block:40px; }
+body .area-intro { padding-bottom:8px; }
+body .area-transport { padding-bottom:56px; }
+@media(max-width:760px) {
+  body[data-page="home"] #app section { padding-top:32px !important; padding-bottom:32px !important; }
+  body[data-page="home"] #app .home-copy-section:has(.text-block) { padding-top:20px !important; }
+  body .home-copy-section, body .area-intro, body .area-places { padding-block:32px; }
+  body .area-intro { padding-bottom:8px; }
+  body .area-transport { padding-bottom:40px; }
+  body .gallery-section { padding-bottom:40px; }
+}

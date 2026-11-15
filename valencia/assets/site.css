@@ -17,3 +17,31 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
  header > div { gap: 8px !important; }
 }
 @media(max-width:420px) { header > a { font-size: 23px !important; } header span { max-width: 95px; } }
+
+/* Approved apartment photos and longer bilingual room descriptions. */
+.apartment-photo { display:block; width:100%; height:auto; border-radius:2px; }
+picture { display:block; }
+.approved-copy { color:#3a3733; font-size:17px; line-height:1.75; min-width:0; overflow-wrap:anywhere; }
+.approved-copy p { margin:0 0 16px; }
+.approved-copy p:last-child { margin-bottom:0; }
+.approved-copy h1, .approved-copy h2 { font-family:'Manrope',sans-serif; color:#16918c; line-height:1.25; margin:0 0 18px; }
+.approved-copy h2 { font-size:28px; }
+.hero-copy { color:rgba(255,255,255,.92); margin-bottom:28px; }
+.home-copy-section { max-width:1120px; margin:0 auto; padding:56px 24px 20px; box-sizing:border-box; }
+.home-block { display:grid; grid-template-columns:1.1fr 1fr; gap:40px; align-items:center; }
+.story-content.home-block { max-width:1072px; }
+.text-block { max-width:760px; margin:0 auto; }
+.room-card { position:relative; min-width:0; margin:0; background:#fff; padding:10px; border-radius:5px; box-shadow:0 12px 26px rgba(0,0,0,.14); }
+.paper-tape { position:absolute; top:-10px; left:30px; width:44px; height:20px; background:#7c9a4a; opacity:.88; transform:rotate(-7deg); box-shadow:0 3px 6px rgba(0,0,0,.25); z-index:2; }
+.room-card:nth-child(3n + 2) .paper-tape { background:#d7973f; left:50%; transform:rotate(5deg); }
+.gallery-section { max-width:1120px; margin:0 auto; padding:20px 24px 90px; box-sizing:border-box; }
+.room-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:36px 28px; align-items:start; }
+.room-photos { display:grid; gap:10px; }
+.room-photos:empty { display:none; }
+.room-description { padding:16px 10px 10px; font-size:15px; line-height:1.7; }
+.room-description h2 { font-size:20px; color:#23211d; margin-bottom:12px; }
+@media(max-width:760px) {
+ .home-block { gap:28px; }
+ .home-block .room-card { max-width:520px; width:100%; box-sizing:border-box; justify-self:center; }
+ .approved-copy h2 { font-size:25px; }
+}

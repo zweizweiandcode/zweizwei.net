@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "id": "la-mas-bonita",
+      "name": "La Más Bonita Patacona",
+      "coordinates": [
+        39.4852,
+        -0.32557
+      ],
+      "description": {
+        "ru": "Кафе прямо у пляжа Патакона. Здесь очень вкусные тортики, поэтому я люблю заходить сюда за кофе с чем-нибудь сладким, а потом гулять вдоль моря.",
+        "en": "A café right by Patacona beach. The cakes here are delicious, so I love stopping by for a coffee and something sweet before taking a walk along the sea."
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20M%C3%A1s%20Bonita%20Patacona%2C%20Passeig%20Mar%C3%ADtim%20de%20la%20Patacona%2011",
+      "website": "https://www.lamasbonita.es/es",
+      "coordinateSource": "https://www.openstreetmap.org/node/3156558925",
+      "image": {
+        "src": "../../images/valencia/la-mas-bonita.png",
+        "width": 854,
+        "height": 660,
+        "alt": {
+          "ru": "La Más Bonita Patacona",
+          "en": "La Más Bonita Patacona"
+        }
+      }
+    },
+    {
+      "id": "federal",
+      "name": "Federal Café Valencia",
+      "coordinates": [
+        39.4717475,
+        -0.3753626
+      ],
+      "description": {
+        "ru": "Уютное кафе в центре Валенсии, где можно позавтракать, выпить кофе и спокойно посидеть с ноутбуком. Хорошее место, если хочется немного поработать во время прогулки по городу.",
+        "en": "A cosy café in central Valencia where you can have breakfast, enjoy a coffee and spend some quiet time with your laptop. A lovely place to get a little work done while exploring the city."
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Federal%20Caf%C3%A9%20Valencia%2C%20Ambaixador%20Vich%2015",
+      "website": "https://www.federalcafe.es/federalvalencia",
+      "coordinateSource": "https://maps.app.goo.gl/9oFparVpeG67GjUe6",
+      "image": {
+        "src": "../../images/valencia/federal-cafe.png",
+        "width": 814,
+        "height": 564,
+        "alt": {
+          "ru": "Federal Café Valencia",
+          "en": "Federal Café Valencia"
+        }
+      }
+    },
+    {
+      "id": "wayco-cabanyal",
+      "name": "Wayco Cabanyal",
+      "coordinates": [
+        39.4641393,
+        -0.3343734
+      ],
+      "description": {
+        "ru": "Тихий и приятный коворкинг недалеко от моря. Здесь можно спокойно сосредоточиться на работе, а если нужно созвониться или провести встречу, есть отдельные переговорные комнаты.",
+        "en": "A quiet, welcoming coworking space not far from the sea. It is easy to focus on work here, and there are separate meeting rooms if you need to take a call or meet someone."
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wayco%20Cabanyal%2C%20Mariano%20Cuber%2017%2C%20Valencia",
+      "website": "https://wayco.es/coworking-en-valencia/cabanyal/",
+      "coordinateSource": "https://maps.app.goo.gl/cW3MvPZEZfS6bB9s7",
+      "image": {
+        "src": "../../images/valencia/wayco-cabanyal.png",
+        "width": 1092,
+        "height": 950,
+        "alt": {
+          "ru": "Wayco Cabanyal",
+          "en": "Wayco Cabanyal"
+        }
+      }
+    },
+    {
+      "id": "tallat",
+      "name": "TALLAT Coffee Roasters",
+      "coordinates": [
+        39.4647374,
+        -0.3298784
+      ],
+      "description": {
+        "ru": "Небольшая спешелти-кофейня недалеко от моря. Сюда стоит заглянуть за действительно хорошим кофе — эспрессо, фильтром или зёрнами домой.",
+        "en": "A small specialty coffee shop not far from the sea. Come here for really good coffee — espresso, filter or beans to take home."
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TALLAT%20Coffee%20Roasters%2C%20Barraca%2025%2C%20Valencia",
+      "website": "https://tallat.coffee/",
+      "coordinateSource": "https://coffeedash.com/valencia/tallat/",
+      "image": {
+        "src": "../../images/valencia/tallat-coffee.png",
+        "width": 1352,
+        "height": 1300,
+        "alt": {
+          "ru": "TALLAT Coffee Roasters",
+          "en": "TALLAT Coffee Roasters"
+        }
+      }
+    },
+    {
+      "id": "fabrica-de-hielo",
+      "name": "La Fábrica de Hielo",
+      "coordinates": [
+        39.4693961,
+        -0.3272787
+      ],
+      "description": {
+        "ru": "Бывшая фабрика льда, которая превратилась в культурное пространство. Здесь бывают концерты, кинопоказы и даже ночные техно-дискотеки. Можно прийти на какое-нибудь событие или просто провести приятный вечер в необычном месте.",
+        "en": "A former ice factory turned cultural space. There are concerts, film screenings and even late-night techno parties. Come for an event or simply enjoy an evening somewhere a little different."
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20F%C3%A1brica%20de%20Hielo%2C%20Valencia",
+      "website": "https://www.lafabricadehielo.net/contacto/",
+      "coordinateSource": "https://www.lafabricadehielo.net/contacto/",
+      "image": {
+        "src": "../../images/valencia/la-fabrica-del-hielo.png",
+        "width": 814,
+        "height": 824,
+        "alt": {
+          "ru": "La Fábrica de Hielo",
+          "en": "La Fábrica de Hielo"
+        }
+      }
+    }
+  ]
+}

@@ -1,29 +1,34 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Альборайя, у моря — Casa Alboraya</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<title>Валенсия и море — Casa Alboraya</title>
+<link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../assets/area.css"><link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/typography.css">
+<link rel="preload" href="../assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
 
-<script src="../assets/site.js" defer></script></head>
+<script src="../assets/vendor/leaflet/leaflet.js" defer></script>
+<script src="../assets/site.js" defer></script>
+<script src="../assets/area.js" defer></script><meta name="robots" content="noindex, nofollow">
+</head>
 <body data-page="area"><div id="app">
 <div style="min-height:100vh;background:#fbf9f3">
 
 <header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
   <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
-    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+    <a class="site-logo" href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
       <a href="../area/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Район</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
-      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+      <button style="background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
     </div>
   </div>
   <div data-panel="menuOpen" hidden>
-    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px" id="mobile-menu">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
@@ -32,47 +37,30 @@
   </div>
 </header>
 
-<section style="max-width:1120px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="two-columns">
-  <div style="min-width:0">
-    <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">район</h2>
-    <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 16px">Альборайя, у моря</h1>
-    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0 0 14px">Квартира находится в Альборайе — тихом прибрежном районе рядом с Малва-роса и совсем недалеко от Валенсии. Это не туристический центр, а обычная жизнь у моря: рынок, велодорожки, соседи, которые здороваются.</p>
-    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0">Карта ниже — приблизительная, просто чтобы показать расположение района. Точный адрес и инструкции по входу я присылаю отдельно после подтверждения дат.</p>
-  </div>
-  <div style="position:relative">
-    <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.4deg)">
-      <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Карта района (примерная)"><span>Карта района (примерная)</span></div>
+<section class="area-intro"><div class="approved-copy text-block"><h1>За что я люблю Валенсию</h1><p>Мне нравится, что здесь море — часть обычной жизни. Можно просто пойти погулять по пляжу, посидеть у воды и немного отвлечься от всего.</p><p>Валенсия — красивый город с вкусной едой, солнцем и своим неспешным ритмом. Близость моря помогает расслабиться, даже когда приезжаешь сюда не в отпуск, а просто пожить и поработать.</p></div></section>
+<section class="area-places" aria-labelledby="places-heading">
+  <div class="area-map-frame"><div class="area-map" data-area-map role="region" aria-label="Карта мест в Валенсии"></div></div>
+  <p class="area-map-hint">Нажмите на маркер, чтобы узнать больше, или листайте карточки под картой.</p>
+  <p class="area-status" data-area-status role="status" aria-live="polite">Загружаем карту и места…</p>
+  <div class="area-favourites-heading approved-copy"><h2 id="places-heading">Мои любимые места в Валенсии</h2><p>Здесь несколько мест, куда я люблю возвращаться. За хорошим кофе, чтобы поработать с ноутбуком, встретиться с друзьями или просто приятно провести время.</p></div>
+  <div class="area-carousel" data-area-carousel role="region" aria-roledescription="карусель" aria-label="Карусель любимых мест" tabindex="0">
+    <ol id="area-place-slides" class="area-carousel-track" role="presentation" data-area-places></ol>
+    <div class="area-carousel-controls" data-carousel-controls hidden>
+      <button class="area-carousel-arrow" type="button" data-carousel-step="-1" aria-label="Предыдущее место" aria-controls="area-place-slides">←</button>
+      <span class="area-carousel-position" data-carousel-position role="status" aria-live="polite" aria-atomic="true"></span>
+      <button class="area-carousel-arrow" type="button" data-carousel-step="1" aria-label="Следующее место" aria-controls="area-place-slides">→</button>
     </div>
-    <div style="position:absolute;top:-10px;right:34px;width:48px;height:20px;background:#d7973f;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
-    <div style="position:absolute;bottom:8px;left:-14px;background:#fff;border-radius:4px;padding:7px 12px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-3deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:18px;color:#16918c">где-то тут ;)</div>
   </div>
+  <noscript><p>Включите JavaScript, чтобы увидеть карту и карточки мест.</p></noscript>
 </section>
-
-<section style="max-width:1120px;margin:0 auto;padding:30px 24px 90px">
-  <div style="display:flex;flex-wrap:wrap;gap:24px">
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Малва-роса</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Соседний пляжный район — рукой подать.</div>
-      </div>
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Валенсия</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Центр города — близко, удобно доехать.</div>
-      </div>
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Атмосфера</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Тихо, по-соседски, без туристической суеты.</div>
-      </div>
-    
-  </div>
-  <p style="margin:32px 0 0;font-size:14px;color:#8a8378;font-style:italic">Расстояние до пляжа, время в пути и парковку уточню отдельно — эти детали ещё не подтверждены.</p>
+<section class="area-transport" aria-labelledby="transport-heading">
+  <div class="area-moped-card"><span class="area-tape" aria-hidden="true"></span><img src="../../images/valencia/yego-moped.jpeg" alt="Электрический мопед YEGO" width="800" height="600" loading="lazy" decoding="async"></div>
+  <div class="approved-copy"><h2 id="transport-heading">Передвижение по городу</h2><p>Я часто езжу по Валенсии на электрических мопедах YEGO. Здесь тепло большую часть года, и очень приятно ехать по городу, чувствуя ветер. Для меня это один из самых любимых способов передвижения.</p><p>Мопеды можно арендовать через приложение YEGO: находишь ближайший, бронируешь и едешь куда нужно. Главное — заранее проверить условия аренды, необходимые водительские права и зоны парковки.</p><a class="area-yego-link" href="https://rideyego.com/es/how-it-works/valencia" target="_blank" rel="noopener noreferrer">Как пользоваться YEGO в Валенсии →</a></div>
 </section>
 
 <footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
-  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
-  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+  <p style="color:rgba(255,255,255,.85);margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="color:rgba(255,255,255,.55)">Гид для гостей →</a>
 </footer>
 
 </div>
@@ -83,20 +71,20 @@
 
 <header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
   <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
-    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+    <a class="site-logo" href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
       <a href="../area/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Район</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
-      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
+      <button style="background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">EN</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Меню" aria-controls="mobile-menu" type="button">☰</button>
     </div>
   </div>
   <div data-panel="menuOpen" hidden>
-    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px" id="mobile-menu">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Главная</a>
       <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Галерея</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Даты</a>
@@ -105,70 +93,54 @@
   </div>
 </header>
 
-<section style="max-width:1120px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="two-columns">
-  <div style="min-width:0">
-    <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">район</h2>
-    <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 16px">Альборайя, у моря</h1>
-    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0 0 14px">Квартира находится в Альборайе — тихом прибрежном районе рядом с Малва-роса и совсем недалеко от Валенсии. Это не туристический центр, а обычная жизнь у моря: рынок, велодорожки, соседи, которые здороваются.</p>
-    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0">Карта ниже — приблизительная, просто чтобы показать расположение района. Точный адрес и инструкции по входу я присылаю отдельно после подтверждения дат.</p>
-  </div>
-  <div style="position:relative">
-    <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.4deg)">
-      <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Карта района (примерная)"><span>Карта района (примерная)</span></div>
+<section class="area-intro"><div class="approved-copy text-block"><h1>За что я люблю Валенсию</h1><p>Мне нравится, что здесь море — часть обычной жизни. Можно просто пойти погулять по пляжу, посидеть у воды и немного отвлечься от всего.</p><p>Валенсия — красивый город с вкусной едой, солнцем и своим неспешным ритмом. Близость моря помогает расслабиться, даже когда приезжаешь сюда не в отпуск, а просто пожить и поработать.</p></div></section>
+<section class="area-places" aria-labelledby="places-heading">
+  <div class="area-map-frame"><div class="area-map" data-area-map role="region" aria-label="Карта мест в Валенсии"></div></div>
+  <p class="area-map-hint">Нажмите на маркер, чтобы узнать больше, или листайте карточки под картой.</p>
+  <p class="area-status" data-area-status role="status" aria-live="polite">Загружаем карту и места…</p>
+  <div class="area-favourites-heading approved-copy"><h2 id="places-heading">Мои любимые места в Валенсии</h2><p>Здесь несколько мест, куда я люблю возвращаться. За хорошим кофе, чтобы поработать с ноутбуком, встретиться с друзьями или просто приятно провести время.</p></div>
+  <div class="area-carousel" data-area-carousel role="region" aria-roledescription="карусель" aria-label="Карусель любимых мест" tabindex="0">
+    <ol id="area-place-slides" class="area-carousel-track" role="presentation" data-area-places></ol>
+    <div class="area-carousel-controls" data-carousel-controls hidden>
+      <button class="area-carousel-arrow" type="button" data-carousel-step="-1" aria-label="Предыдущее место" aria-controls="area-place-slides">←</button>
+      <span class="area-carousel-position" data-carousel-position role="status" aria-live="polite" aria-atomic="true"></span>
+      <button class="area-carousel-arrow" type="button" data-carousel-step="1" aria-label="Следующее место" aria-controls="area-place-slides">→</button>
     </div>
-    <div style="position:absolute;top:-10px;right:34px;width:48px;height:20px;background:#d7973f;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
-    <div style="position:absolute;bottom:8px;left:-14px;background:#fff;border-radius:4px;padding:7px 12px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-3deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:18px;color:#16918c">где-то тут ;)</div>
   </div>
+  <noscript><p>Включите JavaScript, чтобы увидеть карту и карточки мест.</p></noscript>
 </section>
-
-<section style="max-width:1120px;margin:0 auto;padding:30px 24px 90px">
-  <div style="display:flex;flex-wrap:wrap;gap:24px">
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Малва-роса</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Соседний пляжный район — рукой подать.</div>
-      </div>
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Валенсия</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Центр города — близко, удобно доехать.</div>
-      </div>
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Атмосфера</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Тихо, по-соседски, без туристической суеты.</div>
-      </div>
-    
-  </div>
-  <p style="margin:32px 0 0;font-size:14px;color:#8a8378;font-style:italic">Расстояние до пляжа, время в пути и парковку уточню отдельно — эти детали ещё не подтверждены.</p>
+<section class="area-transport" aria-labelledby="transport-heading">
+  <div class="area-moped-card"><span class="area-tape" aria-hidden="true"></span><img src="../../images/valencia/yego-moped.jpeg" alt="Электрический мопед YEGO" width="800" height="600" loading="lazy" decoding="async"></div>
+  <div class="approved-copy"><h2 id="transport-heading">Передвижение по городу</h2><p>Я часто езжу по Валенсии на электрических мопедах YEGO. Здесь тепло большую часть года, и очень приятно ехать по городу, чувствуя ветер. Для меня это один из самых любимых способов передвижения.</p><p>Мопеды можно арендовать через приложение YEGO: находишь ближайший, бронируешь и едешь куда нужно. Главное — заранее проверить условия аренды, необходимые водительские права и зоны парковки.</p><a class="area-yego-link" href="https://rideyego.com/es/how-it-works/valencia" target="_blank" rel="noopener noreferrer">Как пользоваться YEGO в Валенсии →</a></div>
 </section>
 
 <footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
-  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
-  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Гид для гостей →</a>
+  <p style="color:rgba(255,255,255,.85);margin:0 0 8px">Есть вопрос? Напишу как отвечу — контакт уточню.</p>
+  <a href="../guide/index.html" style="color:rgba(255,255,255,.55)">Гид для гостей →</a>
 </footer>
 
 </div>
 
-</template><template id="page-en">
+</template>
+<template id="page-en">
 <div style="min-height:100vh;background:#fbf9f3">
 
 <header style="position:sticky;top:0;z-index:50;background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;box-shadow:0 2px 12px rgba(0,0,0,.18)">
   <div style="max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
-    <nav class="nav-desktop" style="gap:22px;align-items:center;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:15px">
+    <a class="site-logo" href="../index.html" style="font-family:&#x27;Caveat&#x27;,cursive;font-size:30px;font-weight:700;color:#fff;text-decoration:none">Casa Alboraya</a>
+    <nav class="nav-desktop" style="gap:22px;align-items:center">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
       <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
       <a href="../area/index.html" style="color:#fff;border-bottom:2px solid #f2b877;padding-bottom:3px">Area</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px">
-      <button style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:13px;background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">RU</button>
-      <button class="nav-hamburger" style="background:none;border:none;color:#fff;font-size:24px;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Menu" aria-controls="mobile-menu" type="button">☰</button>
+      <button style="background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 14px;cursor:pointer" data-action="toggleLang" type="button">RU</button>
+      <button class="nav-hamburger" style="background:none;border:none;color:#fff;cursor:pointer;padding:4px 8px" data-action="toggleMenu" aria-expanded="false" aria-label="Menu" aria-controls="mobile-menu" type="button">☰</button>
     </div>
   </div>
   <div data-panel="menuOpen" hidden>
-    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px;font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:600;font-size:16px" id="mobile-menu">
+    <nav class="nav-hamburger" style="flex-direction:column;padding:6px 20px 16px;gap:12px" id="mobile-menu">
       <a href="../index.html" style="color:rgba(255,255,255,.88)">Home</a>
       <a href="../gallery/index.html" style="color:rgba(255,255,255,.88)">Gallery</a>
       <a href="../dates/index.html" style="color:rgba(255,255,255,.88)">Dates</a>
@@ -177,47 +149,30 @@
   </div>
 </header>
 
-<section style="max-width:1120px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="two-columns">
-  <div style="min-width:0">
-    <h2 style="font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:34px;color:#16918c;margin:0 0 4px">the area</h2>
-    <h1 style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:clamp(28px,4vw,40px);color:#23211d;margin:0 0 16px">Alboraya, by the sea</h1>
-    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0 0 14px">The apartment is in Alboraya — a quiet coastal area next to Malva-rosa and very close to Valencia. Not a tourist strip, just ordinary seaside life: a market, bike lanes, neighbours who say hello.</p>
-    <p style="font-size:16px;line-height:1.7;color:#3a3733;margin:0">The map below is approximate, just to show roughly where the area is. The exact address and entry instructions are sent separately once dates are confirmed.</p>
-  </div>
-  <div style="position:relative">
-    <div style="background:#fff;padding:10px;border-radius:5px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.4deg)">
-      <div class="photo-placeholder" style="width:100%;aspect-ratio:4/3;display:block" role="img" aria-label="Area map (approximate)"><span>Area map (approximate)</span></div>
+<section class="area-intro"><div class="approved-copy text-block"><h1>What I love about Valencia</h1><p>I love that the sea is part of everyday life here. You can just go for a walk along the beach, sit by the water and take a break from everything.</p><p>Valencia is a beautiful city with delicious food, sunshine and its own unhurried rhythm. Being near the sea makes it easier to relax, even when you come not for a holiday but simply to live and work for a while.</p></div></section>
+<section class="area-places" aria-labelledby="places-heading">
+  <div class="area-map-frame"><div class="area-map" data-area-map role="region" aria-label="Map of places in Valencia"></div></div>
+  <p class="area-map-hint">Select a marker to find out more, or browse the cards below the map.</p>
+  <p class="area-status" data-area-status role="status" aria-live="polite">Loading the map and places…</p>
+  <div class="area-favourites-heading approved-copy"><h2 id="places-heading">My favourite places in Valencia</h2><p>Here are a few places I love returning to — for good coffee, some time working on my laptop, meeting friends or simply enjoying myself.</p></div>
+  <div class="area-carousel" data-area-carousel role="region" aria-roledescription="carousel" aria-label="Favourite places carousel" tabindex="0">
+    <ol id="area-place-slides" class="area-carousel-track" role="presentation" data-area-places></ol>
+    <div class="area-carousel-controls" data-carousel-controls hidden>
+      <button class="area-carousel-arrow" type="button" data-carousel-step="-1" aria-label="Previous place" aria-controls="area-place-slides">←</button>
+      <span class="area-carousel-position" data-carousel-position role="status" aria-live="polite" aria-atomic="true"></span>
+      <button class="area-carousel-arrow" type="button" data-carousel-step="1" aria-label="Next place" aria-controls="area-place-slides">→</button>
     </div>
-    <div style="position:absolute;top:-10px;right:34px;width:48px;height:20px;background:#d7973f;opacity:.88;transform:rotate(6deg);box-shadow:0 3px 6px rgba(0,0,0,.25)"></div>
-    <div style="position:absolute;bottom:8px;left:-14px;background:#fff;border-radius:4px;padding:7px 12px;box-shadow:0 8px 18px rgba(0,0,0,.25);transform:rotate(-3deg);font-family:&#x27;Caveat&#x27;,cursive;font-weight:700;font-size:18px;color:#16918c">somewhere around here ;)</div>
   </div>
+  <noscript><p>Enable JavaScript to see the map and place cards.</p></noscript>
 </section>
-
-<section style="max-width:1120px;margin:0 auto;padding:30px 24px 90px">
-  <div style="display:flex;flex-wrap:wrap;gap:24px">
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Malva-rosa</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">The neighbouring beach area — a short hop away.</div>
-      </div>
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Valencia</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">The city centre is close and easy to reach.</div>
-      </div>
-    
-      <div style="flex:1;min-width:220px;background:#fffdf6;border:1px solid #e8e2d0;border-radius:4px;padding:22px 20px;box-shadow:0 8px 18px rgba(0,0,0,.08)">
-        <div style="font-family:&#x27;Space Grotesk&#x27;,sans-serif;font-weight:700;font-size:16px;color:#16918c;margin-bottom:8px">Feel</div>
-        <div style="font-size:14.5px;line-height:1.6;color:#3a3733">Quiet, neighbourly, no tourist rush.</div>
-      </div>
-    
-  </div>
-  <p style="margin:32px 0 0;font-size:14px;color:#8a8378;font-style:italic">Distance to the beach, travel time and parking to be confirmed separately — not settled yet.</p>
+<section class="area-transport" aria-labelledby="transport-heading">
+  <div class="area-moped-card"><span class="area-tape" aria-hidden="true"></span><img src="../../images/valencia/yego-moped.jpeg" alt="YEGO electric moped" width="800" height="600" loading="lazy" decoding="async"></div>
+  <div class="approved-copy"><h2 id="transport-heading">Getting around the city</h2><p>I often get around Valencia on YEGO electric mopeds. It is warm here for most of the year, and riding through the city with the breeze is lovely. For me, it is one of my favourite ways to get around.</p><p>You can rent a moped through the YEGO app: find one nearby, reserve it and ride where you need to go. Just make sure to check the rental conditions, required driving licence and parking zones beforehand.</p><a class="area-yego-link" href="https://rideyego.com/es/how-it-works/valencia" target="_blank" rel="noopener noreferrer">How to use YEGO in Valencia →</a></div>
 </section>
 
 <footer style="background:#16918c;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:36px 36px;padding:32px 20px;text-align:center">
-  <p style="font-family:&#x27;Nunito Sans&#x27;,sans-serif;color:rgba(255,255,255,.85);font-size:14px;margin:0 0 8px">Got a question? I&#x27;ll reply myself — contact info coming soon.</p>
-  <a href="../guide/index.html" style="font-size:13px;color:rgba(255,255,255,.55)">Guest guide →</a>
+  <p style="color:rgba(255,255,255,.85);margin:0 0 8px">Got a question? I&#x27;ll reply myself — contact info coming soon.</p>
+  <a href="../guide/index.html" style="color:rgba(255,255,255,.55)">Guest guide →</a>
 </footer>
 
 </div>

@@ -1,5 +1,5 @@
 
-body{margin:0;font-family:'Nunito Sans',sans-serif;background:#fbf9f3}
+body{margin:0;font-family:'Manrope',sans-serif;background:#fbf9f3}
 a{color:#0e7d78;text-decoration:none}
 a:hover{color:#0a5f5b;text-decoration:underline}
 ::selection{background:#f2b877}
@@ -8,4 +8,38 @@ a:hover{color:#0a5f5b;text-decoration:underline}
 @media (max-width:760px){
   .nav-desktop{display:none}
   .nav-hamburger{display:block}
+}
+
+/* Square photo cards; approved descriptions are shown in the dialog. */
+.gallery-trigger {
+  display:block; width:100%; border:0; padding:0; background:transparent;
+  color:#23211d; text-align:left; cursor:pointer; font:inherit;
+}
+.gallery-trigger .apartment-photo { aspect-ratio:1; width:100%; height:auto; object-fit:cover; }
+.gallery-caption {
+  display:block; padding:16px 6px 8px;
+  font-family:'Manrope',sans-serif; font-size:18px; font-weight:700; line-height:1.4;
+}
+.gallery-modal-open { overflow:hidden; }
+.gallery-dialog {
+  box-sizing:border-box; width:min(1200px,calc(100% - 40px)); max-width:none;
+  max-height:calc(100dvh - 40px); padding:64px;
+  border:1px solid #e8e2d0; border-radius:8px; background:#fffdf6; color:#23211d;
+  box-shadow:0 24px 80px rgba(0,0,0,.35); overflow:auto;
+}
+.gallery-dialog::backdrop { background:rgba(20,35,33,.78); backdrop-filter:blur(6px); }
+.gallery-close {
+  position:absolute; top:16px; right:16px; display:grid; place-items:center;
+  width:36px; height:36px; padding:0; border:0; border-radius:50%;
+  background:#16918c; color:white; font-size:28px; cursor:pointer;
+}
+.gallery-dialog-layout { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:64px; align-items:start; }
+.gallery-dialog-photo { margin-top:-24px; }
+.gallery-dialog-photo .apartment-photo { width:auto; max-width:100%; height:auto; max-height:calc(100dvh - 170px); margin-inline:auto; object-fit:contain; border-radius:16px; }
+.gallery-dialog-copy { font-size:16px; }
+.gallery-dialog-layout.text-only { grid-template-columns:minmax(0,1fr); max-width:720px; margin:auto; }
+@media(max-width:760px) {
+  .gallery-dialog { width:calc(100% - 24px); max-height:calc(100dvh - 24px); }
+  .gallery-dialog-layout { grid-template-columns:minmax(0,1fr); }
+  .gallery-dialog-photo .apartment-photo { max-height:60dvh; }
 }
