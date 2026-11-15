@@ -15,7 +15,7 @@
       "website": "https://www.lamasbonita.es/es",
       "coordinateSource": "https://www.openstreetmap.org/node/3156558925",
       "image": {
-        "src": "../../images/valencia/la-mas-bonita.png",
+        "src": "../../images/valencia/webp/la-mas-bonita.webp",
         "width": 854,
         "height": 660,
         "alt": {
@@ -39,7 +39,7 @@
       "website": "https://www.federalcafe.es/federalvalencia",
       "coordinateSource": "https://maps.app.goo.gl/9oFparVpeG67GjUe6",
       "image": {
-        "src": "../../images/valencia/federal-cafe.png",
+        "src": "../../images/valencia/webp/federal-cafe.webp",
         "width": 814,
         "height": 564,
         "alt": {
@@ -63,7 +63,7 @@
       "website": "https://wayco.es/coworking-en-valencia/cabanyal/",
       "coordinateSource": "https://maps.app.goo.gl/cW3MvPZEZfS6bB9s7",
       "image": {
-        "src": "../../images/valencia/wayco-cabanyal.png",
+        "src": "../../images/valencia/webp/wayco-cabanyal.webp",
         "width": 1092,
         "height": 950,
         "alt": {
@@ -87,7 +87,7 @@
       "website": "https://tallat.coffee/",
       "coordinateSource": "https://coffeedash.com/valencia/tallat/",
       "image": {
-        "src": "../../images/valencia/tallat-coffee.png",
+        "src": "../../images/valencia/webp/tallat-coffee.webp",
         "width": 1352,
         "height": 1300,
         "alt": {
@@ -111,7 +111,7 @@
       "website": "https://www.lafabricadehielo.net/contacto/",
       "coordinateSource": "https://www.lafabricadehielo.net/contacto/",
       "image": {
-        "src": "../../images/valencia/la-fabrica-del-hielo.png",
+        "src": "../../images/valencia/webp/la-fabrica-del-hielo.webp",
         "width": 814,
         "height": 824,
         "alt": {
