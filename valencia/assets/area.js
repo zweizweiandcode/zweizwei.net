@@ -82,7 +82,7 @@
         item.setAttribute('role', 'group');
         item.setAttribute('aria-roledescription', t.slide);
         item.setAttribute('aria-label', `${index + 1} ${t.of} ${cachedData.places.length}: ${place.name}`);
-        item.style.setProperty('--card-tilt', `${[-0.6, 0.5, -0.4, 0.6, -0.5][index]}deg`);
+        item.style.setProperty('--card-tilt', `${[-0.6, 0.5, -0.4, 0.6, -0.5][index % 5]}deg`);
         const photo = element('div', 'area-place-photo');
         const tape = element('span', 'area-tape');
         tape.setAttribute('aria-hidden', 'true');
@@ -110,7 +110,7 @@
       map = L.map(container, { scrollWheelZoom: false, zoomControl: false });
       container.tabIndex = 0;
       L.control.zoom({ zoomInTitle: t.zoomIn, zoomOutTitle: t.zoomOut }).addTo(map);
-      // Only the five public venues determine the view. No home or visitor location is used.
+      // Only the public venues determine the view. No home or visitor location is used.
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

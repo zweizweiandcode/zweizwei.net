@@ -119,6 +119,30 @@
           "en": "La Fábrica de Hielo"
         }
       }
+    },
+    {
+      "id": "superbotella",
+      "name": "Superbotella",
+      "coordinates": [
+        39.4838162,
+        -0.3278709
+      ],
+      "description": {
+        "ru": "Магазин, где можно неспешно познакомиться с напитками Испании — винами, кавой и местными ликёрами. Заглянуть за бутылочкой к ужину, выбрать что-нибудь в подарок или просто рассмотреть этикетки и открыть для себя новое название. Маленькое путешествие по Испании без долгих сборов и планов.",
+        "en": "A shop for an unhurried introduction to Spanish drinks — wines, cava and local liqueurs. Stop by for a bottle to enjoy with dinner, choose a gift or simply browse the labels and discover a new name. A little journey through Spain without much planning or packing."
+      },
+      "googleMapsUrl": "https://maps.app.goo.gl/B87ttsn9mmJ7ASY96",
+      "website": "https://espiritdevi.com/",
+      "coordinateSource": "https://maps.app.goo.gl/B87ttsn9mmJ7ASY96",
+      "image": {
+        "src": "../../images/valencia/superbotella.jpg",
+        "width": 1212,
+        "height": 1106,
+        "alt": {
+          "ru": "Магазин напитков Superbotella",
+          "en": "Superbotella drinks shop"
+        }
+      }
     }
   ]
 }
